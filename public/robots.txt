@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://superflame-agency.pages.dev/sitemap.xml
