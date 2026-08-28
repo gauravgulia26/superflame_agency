@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-base: #F3EFE6;
+    --bg-surface: #EFEAE0;
+    --text-main: #181F1C;
+    --text-muted: #5A6660;
+    --color-forest: #14422E;
+    --color-gold: #C4841D;
+    --color-navy: #0B3B70;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-main);
+    overflow-x: hidden;
+  }
+
+  /* Custom Luxury Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #EAE3D5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #BFB199;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #14422E;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #BFB199 #EAE3D5;
+  }
+}
+
+@layer utilities {
+  /* Warm Cashmere Glassmorphism */
+  .luxury-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(220, 210, 192, 0.85);
+    box-shadow: 0 10px 30px -4px rgba(24, 31, 28, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  }
+
+  .luxury-card-hover {
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .luxury-card-hover:hover {
+    background: rgba(255, 255, 255, 0.98);
+    border-color: rgba(196, 132, 29, 0.45);
+    box-shadow: 0 20px 40px -10px rgba(24, 31, 28, 0.12), 0 0 20px -5px rgba(196, 132, 29, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .luxury-nav {
+    background: rgba(248, 245, 238, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(220, 210, 192, 0.8);
+    box-shadow: 0 12px 35px -8px rgba(24, 31, 28, 0.08);
+  }
+
+  .luxury-card-dark {
+    background: linear-gradient(145deg, #14422E 0%, #0C2D1F 60%, #0B3B70 100%);
+    border: 1px solid rgba(244, 211, 136, 0.35);
+    box-shadow: 0 25px 50px -12px rgba(12, 45, 31, 0.35);
+  }
+
+  .gold-heading-text {
+    background: linear-gradient(135deg, #181F1C 0%, #14422E 50%, #C4841D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .warm-radial-mesh {
+    background-image: 
+      radial-gradient(at 15% 15%, rgba(196, 132, 29, 0.12) 0px, transparent 55%),
+      radial-gradient(at 85% 20%, rgba(20, 66, 46, 0.09) 0px, transparent 60%),
+      radial-gradient(at 50% 85%, rgba(11, 59, 112, 0.07) 0px, transparent 55%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
