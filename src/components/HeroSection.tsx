@@ -137,12 +137,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenOrderModal, onSe
                 </span>
               </div>
 
-              {/* Uncut Fitted Group Image */}
-              <div className="relative group rounded-xl overflow-hidden bg-gradient-to-b from-[#FAF8F4] to-[#EFEAE0] p-1 sm:p-1.5 border border-[#DCD2C0] flex items-center justify-center">
+              {/* Full Bleed Borderless Group Image */}
+              <div className="relative group rounded-xl overflow-hidden flex items-center justify-center">
                 <img
                   src={BUSINESS_INFO.groupImage}
                   alt="Super Gas Cylinders Lineup - Balaji Gas"
-                  className="w-full h-auto max-h-52 sm:max-h-60 object-contain rounded-lg shadow-sm transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-auto object-cover rounded-xl transition-transform duration-300 group-hover:scale-[1.02]"
                   loading="eager"
                 />
 
