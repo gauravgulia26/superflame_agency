@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X, ArrowUpRight, Flame } from 'lucide-react';
+import { Phone, Menu, X, ArrowUpRight, Flame, ShieldCheck } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
 
 interface NavbarProps {
@@ -57,23 +57,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
         >
           <div className="flex items-center justify-between">
             
-            {/* Brand Logo / Business Name */}
+            {/* Brand Logo & Complete Business Metadata (BPCL Affiliation & Proprietor Neeraj Dabas) */}
             <a 
               href="#home" 
-              className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none"
+              className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none text-left"
             >
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-[#14422E] via-[#1D5A3F] to-[#0B3B70] flex items-center justify-center shadow-sm border border-[#C4841D]/40 group-hover:scale-105 transition-transform shrink-0">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#14422E] via-[#1D5A3F] to-[#0B3B70] flex items-center justify-center shadow-sm border border-[#C4841D]/40 group-hover:scale-105 transition-transform shrink-0">
                 <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-[#E59C24] animate-pulse" />
               </div>
               
               <div className="flex flex-col">
-                <div className="flex items-center gap-1 leading-none">
+                <div className="flex items-center gap-1.5 leading-tight">
                   <span className="font-serif font-bold text-base sm:text-lg text-[#14422E] tracking-tight">
                     SUPER FLAME
                   </span>
+                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-[#FAF0DC] text-[#9A6410] border border-[#C4841D]/30 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider">
+                    <ShieldCheck className="w-2.5 h-2.5 text-[#14422E]" />
+                    <span>BPCL Auth.</span>
+                  </span>
                 </div>
-                <span className="text-[9px] sm:text-[10px] text-[#5A6660] font-semibold tracking-wider uppercase">
-                  Authorized LPG Agency • <strong className="text-[#9A6410]">Balaji Gas</strong>
+                
+                <span className="text-[9px] sm:text-[10px] text-[#5A6660] font-medium leading-none mt-0.5">
+                  <strong className="text-[#14422E] font-bold">Balaji Gas</strong> • Prop: <strong className="text-[#9A6410] font-semibold">Neeraj Dabas</strong>
                 </span>
               </div>
             </a>
@@ -129,10 +134,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
 
           </div>
 
-          {/* Mobile Drawer */}
+          {/* Mobile Drawer (with full metadata integrated) */}
           {mobileMenuOpen && (
             <div className="lg:hidden border-t border-[#DCD2C0] mt-2.5 pt-3 pb-2 animate-in slide-in-from-top-2 duration-200">
-              <div className="flex flex-col space-y-1">
+              {/* Mobile Business Header */}
+              <div className="px-3 py-2 bg-[#FAF8F4] rounded-xl border border-[#DCD2C0] mb-2 text-left space-y-0.5">
+                <div className="text-xs font-serif font-bold text-[#14422E]">
+                  Super Flame (Balaji Gas)
+                </div>
+                <div className="text-[10px] text-[#9A6410] font-semibold">
+                  Authorized BPCL LPG Distributor
+                </div>
+                <div className="text-[10px] text-[#5A6660]">
+                  Proprietor: <strong className="text-[#181F1C]">Neeraj Dabas</strong> • Hub: <strong className="text-[#181F1C]">Pooth Khurd, Delhi</strong>
+                </div>
+              </div>
+
+              <div className="flex flex-col space-y-1 text-left">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
