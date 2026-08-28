@@ -371,7 +371,7 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
           <div className="mt-4 pt-3 sm:pt-4 border-t border-[#DCD2C0] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2">
             <div className="flex items-center gap-1.5 text-xs text-[#5A6660]">
               <Info className="w-4 h-4 text-[#C4841D] shrink-0" />
-              <span>{activeProduct.bestPriceNote}</span>
+              <span>Official Super Gas tariff with commercial discount slabs.</span>
             </div>
 
             <button

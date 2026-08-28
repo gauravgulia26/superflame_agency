@@ -16,24 +16,20 @@ export const FaqSection: React.FC = () => {
         
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-8 sm:mb-12 space-y-2"
-          initial={{ opacity: 0, scale: 0.95, filter: 'blur(6px)', y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)', y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-6 sm:mb-8 space-y-1.5"
+          initial={{ opacity: 0, scale: 0.95, y: 15 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF0DC] border border-[#C4841D]/40 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#9A6410]">
-            <HelpCircle className="w-3.5 h-3.5 text-[#C4841D]" />
-            <span>Frequently Asked Questions</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#FAF0DC] border border-[#C4841D]/40 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#9A6410]">
+            <HelpCircle className="w-3 h-3 text-[#C4841D]" />
+            <span>Help & FAQs</span>
           </div>
 
-          <h2 className="font-serif text-2xl sm:text-4xl text-[#181F1C] font-bold tracking-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl text-[#181F1C] font-bold tracking-tight">
             Frequently Asked <span className="italic font-serif text-[#14422E]">Questions</span>
           </h2>
-
-          <p className="text-xs sm:text-sm text-[#5A6660] leading-relaxed">
-            Clear information about our Super Gas distribution operations in Pooth Khurd, cylinder sizes, and delivery logistics.
-          </p>
         </motion.div>
 
         {/* FAQ Accordion List */}
