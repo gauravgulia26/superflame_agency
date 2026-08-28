@@ -37,7 +37,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
             </div>
 
             <p className="text-xs text-white/80 leading-relaxed max-w-sm">
-              Official authorized Super Gas dealer dedicated to safe, dependable, and high-efficiency LPG gas distribution. Delivering 5kg to 450kg cylinders across Delhi NCR.
+              Official authorized Super Gas dealer dedicated to safe, dependable, and high-efficiency LPG gas distribution. Delivering 5kg to 47.5kg cylinders across Delhi NCR.
             </p>
 
             <div className="flex flex-wrap items-center gap-2 pt-1">

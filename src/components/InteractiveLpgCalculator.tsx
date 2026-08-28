@@ -77,8 +77,8 @@ const SECTORS: SectorConfig[] = [
     defaultBurners: 8,
     defaultHours: 16,
     hourlyRateKg: 1.20,
-    recommendedCyl: '450 KG Bulk',
-    setupAdvice: 'Super Gas 450 KG bulk storage vessel or multi-cylinder LOT manifold.'
+    recommendedCyl: '47.5 KG LOT',
+    setupAdvice: 'Multi-cylinder Super Gas 47.5 KG LOT manifold with external vaporizer.'
   }
 ];
 

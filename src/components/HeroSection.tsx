@@ -72,10 +72,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenOrderModal, onSe
               
               {/* Minimalist 1-liner on Mobile, detailed on PC */}
               <p className="sm:hidden text-xs text-[#5A6660] leading-relaxed">
-                Authorized Super Gas supply by <strong className="text-[#181F1C]">Balaji Gas</strong> at <strong className="text-[#181F1C]">{BUSINESS_INFO.shortAddress}</strong>. 5kg to 450kg cylinders.
+                Authorized Super Gas supply by <strong className="text-[#181F1C]">Balaji Gas</strong> at <strong className="text-[#181F1C]">{BUSINESS_INFO.shortAddress}</strong>. 5kg to 47.5kg cylinders.
               </p>
               <p className="hidden sm:block text-sm sm:text-base text-[#5A6660] max-w-2xl font-normal leading-relaxed">
-                Official authorized Super Gas dealer in <strong className="text-[#181F1C] font-bold">Pooth Khurd, Delhi 110039</strong>. Premium certified LPG cylinder supply across all 5 capacities—from <strong className="text-[#14422E] font-bold">5 kg compact cylinders</strong> to <strong className="text-[#14422E] font-bold">450 kg bulk storage tanks</strong>.
+                Official authorized Super Gas dealer in <strong className="text-[#181F1C] font-bold">Pooth Khurd, Delhi 110039</strong>. Premium certified LPG cylinder supply across all 4 capacities—from <strong className="text-[#14422E] font-bold">5 kg compact cylinders</strong> to <strong className="text-[#14422E] font-bold">47.5 kg industrial LOT cylinders</strong>.
               </p>
             </div>
 
@@ -161,7 +161,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenOrderModal, onSe
                   </span>
                 </div>
                 <span className="text-[10px] font-bold text-[#9A6410] bg-[#FAF0DC] px-2 py-0.5 rounded-full border border-[#C4841D]/40">
-                  All 5 Official Sizes
+                  All 4 Official Sizes
                 </span>
               </div>
 
@@ -188,7 +188,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenOrderModal, onSe
                   <span className="text-[#14422E] text-[9px] font-bold">Tap to view</span>
                 </div>
                 
-                <div className="grid grid-cols-5 gap-1 sm:gap-1.5">
+                <div className="grid grid-cols-4 gap-1 sm:gap-1.5">
                   {CYLINDER_PRODUCTS.map((cyl) => (
                     <button
                       key={cyl.id}

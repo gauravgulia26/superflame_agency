@@ -6,7 +6,7 @@ export interface CylinderProduct {
   name: string;
   tagline: string;
   subtitle: string;
-  category: 'Domestic & Compact' | 'Commercial Standard' | 'Commercial Heavy' | 'Industrial Heavy' | 'Bulk Operations';
+  category: 'Domestic & Compact' | 'Commercial Standard' | 'Commercial Heavy' | 'Industrial Heavy';
   image: string;
   posterImage: string;
   colorName: string;
@@ -245,42 +245,6 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
       "Ideal for multi-cylinder automatic changeover manifolds"
     ],
     bestPriceNote: "Direct institutional pricing for manufacturing & hospitality."
-  },
-  {
-    id: "cyl-450kg",
-    size: "450 KG",
-    weightNumber: 450,
-    unit: "KG",
-    name: "450 Kg Super Gas Tank",
-    tagline: "Powering Businesses. Fueling Growth.",
-    subtitle: "Bulk mini-tank storage solution for manufacturing plants, centralized food courts, and complexes.",
-    category: "Bulk Operations",
-    image: "/images/supergas_450kg.png",
-    posterImage: "/images/supergas_450kg.png",
-    colorName: "Titanium White Vessel",
-    themeColor: "#C4841D",
-    badge: "Bulk Vessel",
-    specs: {
-      gasCapacity: "450.0 kg (Approx. 1,000 Litres WC)",
-      tareWeight: "Approx. 340 kg (Pressure Vessel)",
-      height: "1750 mm",
-      diameter: "950 mm",
-      valveType: "Industrial Flanged Safety Multi-Port Assembly",
-      offTakeType: "Liquid / Vapour Heavy Turnkey Manifold"
-    },
-    idealFor: [
-      "Manufacturing Plants & Glass Melting Furnaces",
-      "Shopping Mall Centralized Food Courts",
-      "Pharmaceutical Synthesis & Chemical Plants",
-      "Townships & Reticulated Commercial Networks"
-    ],
-    features: [
-      "Powering businesses and fueling growth with bulk storage",
-      "Replaces 24+ standard cylinders in a single safe vessel",
-      "Telemetry monitoring & automated pressure interlocks",
-      "Lowest bulk unit energy tariff with scheduled tanker supply"
-    ],
-    bestPriceNote: "Dedicated bulk tanker replenishment with maximum tariff advantages."
   }
 ];
 
@@ -326,9 +290,9 @@ export const COMMERCIAL_SOLUTIONS = [
   },
   {
     title: "Industrial & Factories",
-    tag: "47.5 KG LOT & 450 KG",
+    tag: "47.5 KG LOT & Heavy VOT",
     description: "Turnkey LPG installations with automated changeover manifolds, external water-bath vaporizers, and PESO-compliant reticulation.",
-    points: ["Zero winter freezing loss", "Complete safety certification", "Scheduled bulk supply"]
+    points: ["Zero winter freezing loss", "Complete safety certification", "Scheduled bulk cylinder supply"]
   }
 ];
 
@@ -339,7 +303,7 @@ export const FAQS = [
   },
   {
     question: "Which cylinder sizes are available for supply?",
-    answer: "We supply all 5 official capacity Super Gas cylinders: 5 kg (Domestic & Compact), 19 kg (Standard Commercial), 35 kg (High-Efficiency Commercial), 47.5 kg (Heavy Commercial & LOT/VOT Industrial), and 450 kg (Super Gas Bulk Storage Tank)."
+    answer: "We supply all 4 official capacity Super Gas cylinders: 5 kg (Domestic & Compact), 19 kg (Standard Commercial), 35 kg (High-Efficiency Commercial), and 47.5 kg (Heavy Commercial & LOT/VOT Industrial)."
   },
   {
     question: "How do I place a quick commercial cylinder order or schedule regular deliveries?",

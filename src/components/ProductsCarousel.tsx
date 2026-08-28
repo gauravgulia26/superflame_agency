@@ -104,7 +104,7 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
           <div className="space-y-1 sm:space-y-2 max-w-2xl text-left">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF0DC] border border-[#C4841D]/40 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#9A6410]">
               <Flame className="w-3.5 h-3.5 text-[#E59C24]" />
-              <span>All 5 Official Super Gas Capacities</span>
+              <span>All 4 Official Super Gas Capacities</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-4xl text-[#181F1C] font-bold tracking-tight">
               Super Gas <span className="italic font-serif text-[#14422E]">Cylinder Range</span>

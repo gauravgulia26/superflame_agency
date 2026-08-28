@@ -8,8 +8,7 @@ import {
   Gauge, 
   ArrowUpRight, 
   Zap, 
-  ThermometerSnowflake,
-  ShieldAlert
+  ThermometerSnowflake
 } from 'lucide-react';
 import { COMMERCIAL_SOLUTIONS } from '../data/businessData';
 
@@ -18,7 +17,7 @@ interface CommercialProps {
 }
 
 export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderModal }) => {
-  const [selectedTab, setSelectedTab] = useState<'vot' | 'lot' | 'maxima'>('lot');
+  const [selectedTab, setSelectedTab] = useState<'lot' | 'vot'>('lot');
 
   return (
     <section id="commercial" className="py-10 sm:py-20 bg-[#FAF8F4] relative overflow-hidden border-t border-[#DCD2C0]">
@@ -34,7 +33,7 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
         >
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF0DC] border border-[#C4841D]/40 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#9A6410]">
             <Building2 className="w-3.5 h-3.5 text-[#C4841D]" />
-            <span>Industrial & Bulk Energy Infrastructure</span>
+            <span>Commercial & Industrial Energy Infrastructure</span>
           </div>
 
           <h2 className="font-serif text-2xl sm:text-4xl text-[#181F1C] font-bold tracking-tight">
@@ -109,7 +108,7 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
                 Engineering Architecture
               </div>
               <h3 className="font-serif font-bold text-lg sm:text-2xl text-[#181F1C]">
-                Commercial Manifolds & Bulk Vessel Systems
+                Commercial LOT & VOT Manifold Systems
               </h3>
             </div>
 
@@ -129,14 +128,6 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
                 }`}
               >
                 VOT (Vapour Off-Take)
-              </button>
-              <button
-                onClick={() => setSelectedTab('maxima')}
-                className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all ${
-                  selectedTab === 'maxima' ? 'bg-[#14422E] text-white shadow-xs' : 'text-[#5A6660] hover:text-[#14422E]'
-                }`}
-              >
-                450 KG Bulk Tank
               </button>
             </div>
           </div>
@@ -196,7 +187,7 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
                     Vapour Off-Take (VOT) Direct Manifold System
                   </h4>
                   <p className="text-xs text-[#5A6660] leading-relaxed">
-                    Natural vapour withdrawal from 19kg and 35kg cylinders connected via 2x2, 2x4, or 4x4 automatic changeover manifolds. Simple installation, minimal maintenance, and zero electricity requirements for smaller commercial cooking applications.
+                    Natural vapour withdrawal from 19kg and 35kg cylinders connected via 2x2, 2x4, or 4x4 automatic changeover manifolds. Simple installation, minimal maintenance, and zero electricity requirements for standard commercial cooking applications.
                   </p>
                   
                   <div className="grid grid-cols-2 gap-2 pt-1 text-xs">
@@ -213,7 +204,7 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
 
                 <div className="lg:col-span-5 p-4 rounded-xl bg-white border border-[#DCD2C0] text-center space-y-2">
                   <ThermometerSnowflake className="w-8 h-8 text-[#0B3B70] mx-auto" />
-                  <div className="text-xs font-bold text-[#0B3B70] font-serif">Quick 24-Hour Turnkey Setup</div>
+                  <div className="text-xs font-bold text-[#0B3B70] font-serif">Quick Turnkey Installation</div>
                   <p className="text-[11px] text-[#5A6660]">
                     Ideal for cloud kitchens, restaurants, sweet shops, and dhabas with moderate hourly gas flow.
                   </p>
@@ -222,48 +213,6 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
                     className="w-full py-2 rounded-xl bg-gradient-to-r from-[#14422E] to-[#1D5A3F] text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:brightness-105 transition-all"
                   >
                     Request VOT Setup
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {selectedTab === 'maxima' && (
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center">
-                <div className="lg:col-span-7 space-y-2.5">
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-[#FAF0DC] text-[#9A6410] text-xs font-bold">
-                    <ShieldAlert className="w-3.5 h-3.5 text-[#C4841D]" />
-                    <span>Maximum Economy for Large Industrial Plants</span>
-                  </div>
-                  <h4 className="font-serif font-bold text-base sm:text-xl text-[#181F1C]">
-                    450 KG Super Gas Bulk Mini-Tank Vessel
-                  </h4>
-                  <p className="text-xs text-[#5A6660] leading-relaxed">
-                    A stationary or transportable 450kg pressure vessel replacing 24 standard commercial cylinders. Eliminates cylinder handling, reduces manpower requirements, and provides the highest tariff savings with automated tanker replenishment.
-                  </p>
-                  
-                  <div className="grid grid-cols-2 gap-2 pt-1 text-xs">
-                    <div className="p-2 rounded-xl bg-white border border-[#DCD2C0]">
-                      <div className="font-bold text-[#14422E]">Bulk Tariff Discount</div>
-                      <div className="text-[10px] text-[#5A6660]">Maximum commercial savings</div>
-                    </div>
-                    <div className="p-2 rounded-xl bg-white border border-[#DCD2C0]">
-                      <div className="font-bold text-[#14422E]">Zero Manual Handling</div>
-                      <div className="text-[10px] text-[#5A6660]">Refilled via dedicated tanker</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="lg:col-span-5 p-4 rounded-xl bg-white border border-[#DCD2C0] text-center space-y-2">
-                  <Building2 className="w-8 h-8 text-[#C4841D] mx-auto" />
-                  <div className="text-xs font-bold text-[#181F1C] font-serif">Industrial Supply Contract</div>
-                  <p className="text-[11px] text-[#5A6660]">
-                    Dedicated bulk tanker dispatch and scheduled refills for industrial plants in Bawana, Narela, and Delhi NCR.
-                  </p>
-                  <button
-                    onClick={() => onOpenOrderModal('450 KG')}
-                    className="w-full py-2 rounded-xl bg-gradient-to-r from-[#14422E] to-[#1D5A3F] text-white text-xs font-bold uppercase tracking-wider shadow-sm hover:brightness-105 transition-all"
-                  >
-                    Inquire for 450kg Bulk Tank
                   </button>
                 </div>
               </div>

@@ -10,7 +10,7 @@ A modern, mobile-first, production-ready business website for **Balaji Gas (Prop
 * **Helpline / WhatsApp:** `+91 98998 13581` / `9899813581`
 * **Address:** `Plot number 251/154, Kanhaiya Dharam Kata, Pooth Khurd, Delhi 110039`
 * **Coverage Areas:** Pooth Khurd, Bawana, Narela, Rohini, Pitampura, Mundka, Alipur, North & West Delhi NCR.
-* **Cylinder Capacities:** 5 KG, 19 KG, 35 KG, 47.5 KG, 450 KG Bulk Tank
+* **Cylinder Capacities:** 5 KG, 19 KG, 35 KG, 47.5 KG
 
 ## Features
 * **Mobile-First & Minimalist:** Ultra-clean, fast loading, thumb-friendly 1-tap call and WhatsApp refill ordering.
