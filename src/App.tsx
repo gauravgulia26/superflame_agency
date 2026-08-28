@@ -5,7 +5,6 @@ import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { ProductsCarousel } from './components/ProductsCarousel';
 import { CommercialBulkSection } from './components/CommercialBulkSection';
-import { InteractiveLpgCalculator } from './components/InteractiveLpgCalculator';
 import { SafetyTrustSection } from './components/SafetyTrustSection';
 import { ContactSection } from './components/ContactSection';
 import { FaqSection } from './components/FaqSection';
@@ -58,10 +57,6 @@ export function App() {
         />
         
         <CommercialBulkSection 
-          onOpenOrderModal={handleOpenOrderModal} 
-        />
-        
-        <InteractiveLpgCalculator 
           onOpenOrderModal={handleOpenOrderModal} 
         />
         
