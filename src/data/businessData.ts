@@ -81,7 +81,7 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
     weightNumber: 5,
     unit: "KG",
     name: "5 Kg Cylinder",
-    tagline: "Small in size, Big in performance.",
+    tagline: "Powering your everyday moments.",
     category: "Compact & Domestic",
     image: "/images/supergas_5kg.png",
     posterImage: "/images/supergas_5kg.png",
@@ -98,109 +98,109 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
       "Small Kitchens",
       "Food Trucks & Kiosks",
       "Live Catering Counters",
-      "Portable Heating"
+      "Portable Cooking & Heating"
     ],
     features: [
-      "Easy to lift and transport",
+      "Lightweight and easy to carry",
       "Super Gas certified safety valve",
-      "Factory-crimped security seal",
-      "Ideal for quick portable setups"
+      "Tamper-evident security cap",
+      "Quick on-demand refill"
     ]
   },
   {
-    id: "cyl-19kg",
-    size: "19 KG",
-    weightNumber: 19,
+    id: "cyl-12kg",
+    size: "12 KG",
+    weightNumber: 12,
     unit: "KG",
-    name: "19 kg Cylinder",
+    name: "12 Kg Cylinder",
+    tagline: "Powering your everyday moments.",
+    category: "Domestic & Light Commercial",
+    image: "/images/supergas_12kg.png",
+    posterImage: "/images/supergas_12kg.png",
+    badge: "Versatile Choice",
+    specs: {
+      gasCapacity: "12.0 kg Net",
+      tareWeight: "13.5 - 14.5 kg",
+      height: "580 mm",
+      diameter: "300 mm",
+      valveType: "Compact High-Flow SC Valve",
+      offTakeType: "Vapour (VOT)"
+    },
+    idealFor: [
+      "Households & Residential Kitchens",
+      "Small Cafes & Fast Food Outlets",
+      "Tea & Snack Stalls",
+      "Outdoor Food Stalls"
+    ],
+    features: [
+      "Optimal balance of capacity & mobility",
+      "Consistent high-pressure blue flame",
+      "100% inspected O-ring safety seal",
+      "Same-day local dispatch"
+    ]
+  },
+  {
+    id: "cyl-17kg",
+    size: "17 KG",
+    weightNumber: 17,
+    unit: "KG",
+    name: "17 Kg Cylinder",
     tagline: "Powering your everyday moments.",
     category: "Commercial Standard",
-    image: "/images/supergas_19kg.png",
-    posterImage: "/images/supergas_19kg.png",
-    badge: "Commercial Favorite",
+    image: "/images/supergas_17kg.png",
+    posterImage: "/images/supergas_17kg.png",
+    badge: "Commercial Choice",
     specs: {
-      gasCapacity: "19.0 kg Net",
-      tareWeight: "18.5 - 19.5 kg",
-      height: "850 mm",
+      gasCapacity: "17.0 kg Net",
+      tareWeight: "17.0 - 18.0 kg",
+      height: "780 mm",
       diameter: "315 mm",
-      valveType: "High-Flow SC Valve",
+      valveType: "High-Flow Commercial Valve",
       offTakeType: "Vapour (VOT)"
     },
     idealFor: [
-      "Restaurants & Cafes",
-      "Cloud Kitchens",
-      "Dhabas & Sweet Shops",
-      "Catering Services"
+      "Restaurants & Cloud Kitchens",
+      "Dhabas & Sweet Shops (Halwais)",
+      "Hotel Kitchens & Canteens",
+      "Catering & Banquets"
     ],
     features: [
-      "High calorific intense blue flame",
-      "Cleaner burning commercial fuel",
-      "Pairs with 2 to 8 cylinder manifolds",
-      "Reliable daily refill supply"
+      "High thermal calorific output",
+      "Clean burning with zero black residue",
+      "Pairs seamlessly with manifold systems",
+      "Priority commercial refill fleet"
     ]
   },
   {
-    id: "cyl-35kg",
-    size: "35 KG",
-    weightNumber: 35,
+    id: "cyl-33kg",
+    size: "33 KG",
+    weightNumber: 33,
     unit: "KG",
-    name: "35 Kg Cylinder",
-    tagline: "Reliable energy. Everyday confidence.",
+    name: "33 Kg Cylinder",
+    tagline: "Powering your everyday moments.",
     category: "Commercial Heavy",
-    image: "/images/supergas_35kg.png",
-    posterImage: "/images/supergas_35kg.png",
-    badge: "High Capacity",
+    image: "/images/supergas_33kg.png",
+    posterImage: "/images/supergas_33kg.png",
+    badge: "Heavy Duty",
     specs: {
-      gasCapacity: "35.0 kg Net",
-      tareWeight: "31.0 - 33.0 kg",
-      height: "1150 mm",
+      gasCapacity: "33.0 kg Net",
+      tareWeight: "29.0 - 31.0 kg",
+      height: "1100 mm",
       diameter: "360 mm",
-      valveType: "Heavy-Duty Valve",
-      offTakeType: "Vapour (VOT)"
+      valveType: "Heavy-Duty Commercial Valve",
+      offTakeType: "Vapour (VOT) / Heavy Flow"
     },
     idealFor: [
-      "Commercial Bakeries",
-      "Industrial Ovens",
+      "Commercial Bakeries & Large Ovens",
       "Banquet Mega-Kitchens",
-      "Steam Boilers"
+      "Industrial Food Processing Units",
+      "Heavy Commercial Kitchen Manifolds"
     ],
     features: [
-      "84% more fuel than 19kg cylinder",
-      "Fewer swaps and less kitchen downtime",
+      "Nearly double capacity for fewer swaps",
       "High continuous vaporization rate",
-      "Rugged protective steel collar"
-    ]
-  },
-  {
-    id: "cyl-47.5kg",
-    size: "47.5 KG",
-    weightNumber: 47.5,
-    unit: "KG",
-    name: "47.5 Kg Cylinder",
-    tagline: "More Power. Everyday Confidence.",
-    category: "Industrial & LOT",
-    image: "/images/supergas_47kg.png",
-    posterImage: "/images/supergas_47kg.png",
-    badge: "Industrial Grade",
-    specs: {
-      gasCapacity: "47.5 kg Net",
-      tareWeight: "40.0 - 43.0 kg",
-      height: "1350 mm",
-      diameter: "375 mm",
-      valveType: "LOT / Heavy VOT Valve",
-      offTakeType: "Liquid (LOT) or Vapour (VOT)"
-    },
-    idealFor: [
-      "Hotels & Large Caterers",
-      "Central Gas Banks (LOT)",
-      "Industrial Powder Coating",
-      "Factory Heat Processing"
-    ],
-    features: [
-      "Maximum payload per cylinder footprint",
-      "100% fuel extraction with zero winter freezing",
-      "Connects to auto-changeover LOT manifolds",
-      "Lowest cost per kg for high consumption"
+      "Rugged protective steel collar",
+      "Volume commercial discount pricing"
     ]
   }
 ];
@@ -230,19 +230,19 @@ export const SAFETY_PROTOCOLS = [
 
 export const COMMERCIAL_SOLUTIONS = [
   {
-    title: "Restaurants & Cafes",
-    tag: "19 KG VOT",
-    points: ["Instant 2-hour refill dispatch", "Compact auto-changeover manifolds", "Consistent high-flame heat"]
+    title: "Cafes & Small Kitchens",
+    tag: "12 KG VOT",
+    points: ["Quick-service compact setup", "Easy cylinder replacement", "Consistent clean blue flame"]
   },
   {
-    title: "Bakeries & Ovens",
-    tag: "35 KG Heavy",
-    points: ["84% more fuel per cylinder", "Fewer cylinder changes", "Dedicated delivery account"]
+    title: "Restaurants & Dhabas",
+    tag: "17 KG VOT",
+    points: ["Instant 2-hour refill dispatch", "Multi-cylinder changeover manifold", "High continuous heat output"]
   },
   {
-    title: "Industrial & LOT Banks",
-    tag: "47.5 KG LOT",
-    points: ["Zero winter freezing loss", "100% gas extraction", "PESO-compliant manifold piping"]
+    title: "Bakeries & Mega-Kitchens",
+    tag: "33 KG Heavy",
+    points: ["Nearly 2x fuel capacity per bottle", "Fewer cylinder swaps & zero downtime", "Dedicated delivery account manager"]
   }
 ];
 
@@ -253,7 +253,7 @@ export const FAQS = [
   },
   {
     question: "Which cylinder sizes are available?",
-    answer: "We supply 5 kg, 19 kg, 35 kg, and 47.5 kg Super Gas cylinders."
+    answer: "We supply 5 kg, 12 kg, 17 kg, and 33 kg Super Gas cylinders."
   },
   {
     question: "How do I order a cylinder?",
@@ -264,7 +264,7 @@ export const FAQS = [
     answer: "Pooth Khurd, Bawana Industrial Area, Narela, Rohini, Pitampura, Mundka, Alipur, and across Delhi NCR."
   },
   {
-    question: "What is the difference between VOT and LOT systems?",
-    answer: "VOT draws natural vapour for 19kg/35kg cylinders. LOT draws liquid gas from 47.5kg cylinders through an external vaporizer, preventing frost and giving 100% fuel extraction in winter."
+    question: "Do you provide multi-cylinder manifold reticulation?",
+    answer: "Yes, we install certified multi-cylinder automatic changeover manifolds for restaurants, cafes, and bakeries to ensure continuous, uninterrupted gas flow."
   }
 ];

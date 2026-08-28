@@ -70,7 +70,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenOrderModal, onSe
               </h1>
               
               <p className="text-xs sm:text-sm text-[#5A6660] leading-relaxed">
-                Authorized Super Gas supply in <strong className="text-[#181F1C]">Pooth Khurd, Delhi 110039</strong>. Fast commercial cylinder refills (5kg, 19kg, 35kg, 47.5kg) for restaurants, bakeries & industries.
+                Authorized Super Gas supply in <strong className="text-[#181F1C]">Pooth Khurd, Delhi 110039</strong>. Fast cylinder refills (5kg, 12kg, 17kg, 33kg) for commercial kitchens & residences.
               </p>
             </div>
 

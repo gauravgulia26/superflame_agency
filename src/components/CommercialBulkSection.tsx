@@ -17,7 +17,7 @@ interface CommercialProps {
 }
 
 export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderModal }) => {
-  const [selectedTab, setSelectedTab] = useState<'lot' | 'vot'>('lot');
+  const [selectedTab, setSelectedTab] = useState<'heavy' | 'vot'>('heavy');
 
   return (
     <section id="commercial" className="py-8 sm:py-14 bg-[#FAF8F4] relative overflow-hidden border-t border-[#DCD2C0]">
@@ -41,7 +41,7 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
           </h2>
 
           <p className="text-xs sm:text-sm text-[#5A6660]">
-            Certified LOT and VOT commercial gas manifolds for seamless cooking with zero pressure drops.
+            Certified commercial gas manifolds for restaurants, dhabas, and bakeries with zero pressure drops.
           </p>
         </motion.div>
 
@@ -102,21 +102,21 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
           <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-[#DCD2C0] gap-2">
             <div>
               <div className="text-[9px] uppercase font-bold tracking-widest text-[#9A6410]">
-                System Comparison
+                Setup Options
               </div>
               <h3 className="font-serif font-bold text-base sm:text-xl text-[#181F1C]">
-                LOT vs VOT Manifold Systems
+                Commercial Manifold Configurations
               </h3>
             </div>
 
             <div className="flex items-center gap-1 bg-[#FAF8F4] p-0.5 rounded-xl border border-[#DCD2C0] self-start sm:self-auto">
               <button
-                onClick={() => setSelectedTab('lot')}
+                onClick={() => setSelectedTab('heavy')}
                 className={`px-3 py-1 text-xs font-bold rounded-lg transition-all ${
-                  selectedTab === 'lot' ? 'bg-[#14422E] text-white shadow-xs' : 'text-[#5A6660] hover:text-[#14422E]'
+                  selectedTab === 'heavy' ? 'bg-[#14422E] text-white shadow-xs' : 'text-[#5A6660] hover:text-[#14422E]'
                 }`}
               >
-                LOT (Liquid Off-Take)
+                33 KG Heavy Commercial
               </button>
               <button
                 onClick={() => setSelectedTab('vot')}
@@ -124,44 +124,44 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
                   selectedTab === 'vot' ? 'bg-[#14422E] text-white shadow-xs' : 'text-[#5A6660] hover:text-[#14422E]'
                 }`}
               >
-                VOT (Vapour Off-Take)
+                17 KG Standard Commercial
               </button>
             </div>
           </div>
 
           {/* System Tab Details */}
           <div className="mt-3">
-            {selectedTab === 'lot' && (
+            {selectedTab === 'heavy' && (
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-4 items-center">
                 <div className="lg:col-span-7 space-y-1.5">
                   <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#E2EFE7] text-[#14422E] text-xs font-bold">
                     <Zap className="w-3 h-3 text-[#14422E]" />
-                    <span>Best for Hotels, Bakeries & High Demand Kitchens</span>
+                    <span>Best for Bakeries, Large Ovens & High-Volume Banquets</span>
                   </div>
                   <p className="text-xs text-[#5A6660]">
-                    Draws liquid LPG from 47.5 kg cylinders through an external vaporizer. Prevents frost and extracts 100% of the gas even during freezing winters.
+                    High-capacity 33 kg cylinders connected in multi-cylinder banks. Provides double the burn time per bottle, minimizing swaps during peak cooking hours.
                   </p>
                   
                   <div className="grid grid-cols-2 gap-2 pt-1 text-xs">
                     <div className="p-2 rounded-xl bg-white border border-[#DCD2C0]">
-                      <div className="font-bold text-[#14422E]">Zero Winter Freeze</div>
-                      <div className="text-[10px] text-[#5A6660]">100% fuel extraction</div>
+                      <div className="font-bold text-[#14422E]">33 kg Net Gas</div>
+                      <div className="text-[10px] text-[#5A6660]">Fewer cylinder swaps</div>
                     </div>
                     <div className="p-2 rounded-xl bg-white border border-[#DCD2C0]">
-                      <div className="font-bold text-[#14422E]">Space Efficient</div>
-                      <div className="text-[10px] text-[#5A6660]">Fewer cylinders needed</div>
+                      <div className="font-bold text-[#14422E]">Commercial Rates</div>
+                      <div className="text-[10px] text-[#5A6660]">Volume discount slabs</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="lg:col-span-5 p-3 rounded-xl bg-white border border-[#DCD2C0] text-center space-y-1.5">
                   <Gauge className="w-6 h-6 text-[#14422E] mx-auto" />
-                  <div className="text-xs font-bold text-[#14422E] font-serif">PESO Certified LOT Installation</div>
+                  <div className="text-xs font-bold text-[#14422E] font-serif">Certified Heavy Manifold Setup</div>
                   <button
-                    onClick={() => onOpenOrderModal('47.5 KG')}
+                    onClick={() => onOpenOrderModal('33 KG')}
                     className="w-full py-2 rounded-xl bg-gradient-to-r from-[#14422E] to-[#1D5A3F] text-white text-xs font-bold uppercase tracking-wider shadow-xs hover:brightness-105 transition-all"
                   >
-                    Request LOT Setup
+                    Request 33kg Supply
                   </button>
                 </div>
               </div>
@@ -172,32 +172,32 @@ export const CommercialBulkSection: React.FC<CommercialProps> = ({ onOpenOrderMo
                 <div className="lg:col-span-7 space-y-1.5">
                   <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#FAF0DC] text-[#9A6410] text-xs font-bold">
                     <Layers className="w-3 h-3 text-[#C4841D]" />
-                    <span>Best for Cafes, Cloud Kitchens & Dhabas</span>
+                    <span>Best for Restaurants, Cafes, Cloud Kitchens & Dhabas</span>
                   </div>
                   <p className="text-xs text-[#5A6660]">
-                    Direct vapour withdrawal from 19kg / 35kg cylinders via automatic changeover manifold. Simple, reliable, and zero electricity needed.
+                    17 kg standard commercial cylinders connected via 2x2 or 2x4 auto-changeover manifolds. Continuous high-calorific blue flame with zero cooking interruption.
                   </p>
                   
                   <div className="grid grid-cols-2 gap-2 pt-1 text-xs">
                     <div className="p-2 rounded-xl bg-white border border-[#DCD2C0]">
-                      <div className="font-bold text-[#14422E]">Low Setup Cost</div>
-                      <div className="text-[10px] text-[#5A6660]">No vaporizer needed</div>
+                      <div className="font-bold text-[#14422E]">17 kg High-Flame</div>
+                      <div className="text-[10px] text-[#5A6660]">Clean-burning fuel</div>
                     </div>
                     <div className="p-2 rounded-xl bg-white border border-[#DCD2C0]">
-                      <div className="font-bold text-[#14422E]">Auto Changeover</div>
-                      <div className="text-[10px] text-[#5A6660]">Uninterrupted flame</div>
+                      <div className="font-bold text-[#14422E]">Auto-Changeover</div>
+                      <div className="text-[10px] text-[#5A6660]">Instant emergency refill</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="lg:col-span-5 p-3 rounded-xl bg-white border border-[#DCD2C0] text-center space-y-1.5">
                   <ThermometerSnowflake className="w-6 h-6 text-[#0B3B70] mx-auto" />
-                  <div className="text-xs font-bold text-[#0B3B70] font-serif">Quick Manifold Reticulation</div>
+                  <div className="text-xs font-bold text-[#0B3B70] font-serif">Quick Turnkey Installation</div>
                   <button
-                    onClick={() => onOpenOrderModal('19 KG')}
+                    onClick={() => onOpenOrderModal('17 KG')}
                     className="w-full py-2 rounded-xl bg-gradient-to-r from-[#14422E] to-[#1D5A3F] text-white text-xs font-bold uppercase tracking-wider shadow-xs hover:brightness-105 transition-all"
                   >
-                    Request VOT Setup
+                    Request 17kg Supply
                   </button>
                 </div>
               </div>

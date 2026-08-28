@@ -14,7 +14,7 @@ import { QuickFloatingActions } from './components/QuickFloatingActions';
 
 export function App() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedCylinderForModal, setSelectedCylinderForModal] = useState<string>('19 KG');
+  const [selectedCylinderForModal, setSelectedCylinderForModal] = useState<string>('17 KG');
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
 
   const handleOpenOrderModal = (cylinderSize?: string) => {
@@ -48,7 +48,7 @@ export function App() {
         />
         
         <AboutSection 
-          onOpenOrderModal={() => handleOpenOrderModal('19 KG')} 
+          onOpenOrderModal={() => handleOpenOrderModal('17 KG')} 
         />
         
         <ProductsCarousel 
