@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14422E" />
+      <stop offset="50%" stop-color="#19543B" />
+      <stop offset="100%" stop-color="#0B2B1E" />
+    </linearGradient>
+
+    <!-- Outer Gold Ring Gradient -->
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEFD2" />
+      <stop offset="35%" stop-color="#E59C24" />
+      <stop offset="70%" stop-color="#C4841D" />
+      <stop offset="100%" stop-color="#8F5E12" />
+    </linearGradient>
+
+    <!-- Flame Outer Gradient (Super Gas Red) -->
+    <linearGradient id="flameRed" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C23131" />
+      <stop offset="50%" stop-color="#E74C3C" />
+      <stop offset="100%" stop-color="#FF7675" />
+    </linearGradient>
+
+    <!-- Flame Inner Gradient (Super Gas Blue/Cyan) -->
+    <linearGradient id="flameBlue" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0B3B70" />
+      <stop offset="50%" stop-color="#0984E3" />
+      <stop offset="100%" stop-color="#74B9FF" />
+    </linearGradient>
+
+    <!-- Core Golden Spark -->
+    <linearGradient id="sparkGold" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E59C24" />
+      <stop offset="100%" stop-color="#FFF9E6" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+    <filter id="innerGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#E59C24" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Hex Shield -->
+  <rect x="24" y="24" width="464" height="464" rx="110" fill="url(#bgGrad)" filter="url(#glow)" />
+  <rect x="24" y="24" width="464" height="464" rx="110" stroke="url(#goldRing)" stroke-width="8" stroke-opacity="0.85" />
+
+  <!-- Inner Subtle Accent Ring -->
+  <circle cx="256" cy="256" r="190" stroke="url(#goldRing)" stroke-width="2" stroke-dasharray="8 6" stroke-opacity="0.3" />
+
+  <!-- Stylized Balaji Monogram & Super Gas Flame Fusion -->
+  <g filter="url(#glow)">
+    
+    <!-- Outer Powerful Flame (Red/Ruby) -->
+    <path d="M256 90 C290 150 360 210 360 300 C360 375 305 425 256 425 C207 425 152 375 152 300 C152 230 200 175 235 125 C240 145 250 165 265 175 C255 145 252 115 256 90 Z" 
+          fill="url(#flameRed)" />
+
+    <!-- Pure White Dynamic Contrast Ribbon -->
+    <path d="M256 160 C280 205 328 248 328 312 C328 362 292 396 256 396 C220 396 184 362 184 312 C184 260 220 220 242 185 C246 200 252 215 264 222 C255 200 252 180 256 160 Z" 
+          fill="#FFFFFF" />
+
+    <!-- Inner Core Blue Flame (Super Gas Clean Energy Signature) -->
+    <path d="M256 215 C272 250 304 282 304 326 C304 360 280 382 256 382 C232 382 208 360 208 326 C208 288 232 258 248 232 C250 242 254 252 262 258 C256 242 254 228 256 215 Z" 
+          fill="url(#flameBlue)" />
+
+    <!-- Core Golden Spark (Balaji Energy) -->
+    <path d="M256 295 C264 315 278 332 278 352 C278 370 266 378 256 378 C246 378 234 370 234 352 C234 335 246 320 256 295 Z" 
+          fill="url(#sparkGold)" />
+
+  </g>
+
+  <!-- Decorative Modern Super Gas Crest Stars -->
+  <circle cx="95" cy="256" r="6" fill="url(#goldRing)" />
+  <circle cx="417" cy="256" r="6" fill="url(#goldRing)" />
+</svg>

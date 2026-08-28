@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X, Flame, ShieldCheck, MapPin } from 'lucide-react';
+import { Phone, Menu, X, ShieldCheck, MapPin } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
 
 interface NavbarProps {
@@ -52,19 +52,21 @@ export const Navbar: React.FC<NavbarProps> = () => {
           className={`max-w-6xl mx-auto pointer-events-auto rounded-2xl transition-all duration-300 ${
             isScrolled
               ? 'luxury-nav py-2 px-3 sm:px-5 shadow-luxury-md border border-[#C4841D]/35'
-              : 'bg-[#FAF8F4]/95 backdrop-blur-xl py-2.5 px-3 sm:px-5 shadow-luxury-sm border border-[#DCD2C0]'
+              : 'bg-[#FAF8F4]/95 backdrop-blur-xl py-2 px-3 sm:px-5 shadow-luxury-sm border border-[#DCD2C0]'
           }`}
         >
           <div className="flex items-center justify-between gap-2">
             
-            {/* Brand Logo & Complete Business Details (No Word Wrap) */}
+            {/* Custom Balaji Gas Logo & Business Details */}
             <a 
               href="#home" 
               className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none text-left shrink-0 min-w-0"
             >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#14422E] via-[#1D5A3F] to-[#0B3B70] flex items-center justify-center shadow-sm border border-[#C4841D]/40 group-hover:scale-105 transition-transform shrink-0">
-                <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-[#E59C24] animate-pulse" />
-              </div>
+              <img
+                src="/images/balaji_gas_logo.svg"
+                alt="Balaji Gas Logo"
+                className="w-8 h-8 sm:w-9 sm:h-9 object-contain shrink-0 drop-shadow-xs group-hover:scale-105 transition-transform"
+              />
               
               <div className="flex flex-col min-w-0">
                 <div className="flex items-center gap-1.5 leading-tight whitespace-nowrap">
@@ -136,8 +138,9 @@ export const Navbar: React.FC<NavbarProps> = () => {
               {/* Business Overview Card inside Menu */}
               <div className="px-3 py-2.5 bg-[#FAF8F4] rounded-xl border border-[#DCD2C0] mb-2.5 text-left space-y-1">
                 <div className="flex items-center justify-between">
-                  <div className="text-xs font-serif font-bold text-[#14422E]">
-                    {BUSINESS_INFO.brandName}
+                  <div className="flex items-center gap-1.5">
+                    <img src="/images/balaji_gas_logo.svg" alt="Balaji Gas" className="w-4 h-4 object-contain" />
+                    <span className="text-xs font-serif font-bold text-[#14422E]">{BUSINESS_INFO.brandName}</span>
                   </div>
                   <span className="text-[9px] font-bold text-[#9A6410] bg-[#FAF0DC] px-2 py-0.5 rounded border border-[#C4841D]/30">
                     {BUSINESS_INFO.dealerTitle}
@@ -174,8 +177,8 @@ export const Navbar: React.FC<NavbarProps> = () => {
         </header>
       </div>
 
-      {/* Spacing */}
-      <div className="h-14 sm:h-16"></div>
+      {/* Spacious Navbar Clearance Spacer to ensure clean separation from content below */}
+      <div className="h-20 sm:h-24"></div>
     </>
   );
 };

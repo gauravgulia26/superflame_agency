@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, MessageSquare, ArrowUpRight, Flame, Shield, Award } from 'lucide-react';
+import { Phone, MapPin, MessageSquare, ArrowUpRight, Shield, Award } from 'lucide-react';
 import { BUSINESS_INFO, CYLINDER_PRODUCTS } from '../data/businessData';
 
 interface FooterProps {
@@ -21,9 +21,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-3.5">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#14422E] to-[#0B3B70] flex items-center justify-center border border-[#C4841D]/50 shadow-md">
-                <Flame className="w-5 h-5 text-[#E59C24]" />
-              </div>
+              <img
+                src="/images/balaji_gas_logo.svg"
+                alt="Balaji Gas Logo"
+                className="w-10 h-10 object-contain shadow-md rounded-xl"
+              />
               <div>
                 <div className="font-serif font-bold text-xl text-white tracking-tight">
                   {BUSINESS_INFO.brandName}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, MessageSquare, ShieldCheck, Flame, Phone } from 'lucide-react';
+import { X, MessageSquare, ShieldCheck, Phone } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { BUSINESS_INFO, CYLINDER_PRODUCTS } from '../data/businessData';
 
@@ -80,9 +80,11 @@ export const SupplyRequestModal: React.FC<SupplyModalProps> = ({
         {/* Modal Header */}
         <div className="bg-gradient-to-r from-[#14422E] via-[#1D5A3F] to-[#0B3B70] text-white p-4 sm:p-5 flex items-center justify-between border-b border-white/10">
           <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-white/15 text-[#E59C24] border border-white/20">
-              <Flame className="w-5 h-5" />
-            </div>
+            <img
+              src="/images/balaji_gas_logo.svg"
+              alt="Balaji Gas Logo"
+              className="w-10 h-10 object-contain rounded-xl shadow-xs"
+            />
             <div>
               <h3 className="font-serif font-bold text-base sm:text-lg leading-tight text-white">
                 Request Super Gas Supply
