@@ -48,16 +48,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenOrderModal, onSe
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           >
             
-            {/* Badges */}
-            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-              <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#E2EFE7] border border-[#14422E]/25 text-[#14422E] text-[10px] sm:text-xs font-bold tracking-wide shadow-xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#14422E] animate-pulse"></span>
-                <span>SUPER GAS AUTH. DEALER</span>
+            {/* Prominently Highlighted Dealership & Proprietor */}
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E2EFE7] border border-[#14422E]/30 text-[#14422E] text-xs font-bold tracking-wide shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-[#14422E] animate-pulse"></span>
+                <span>AUTHORIZED DEALER: SUPER GAS</span>
               </div>
 
-              <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#FAF0DC] border border-[#C4841D]/40 text-[#9A6410] text-[10px] sm:text-xs font-bold shadow-xs">
-                <Sparkles className="w-3 h-3 text-[#C4841D]" />
-                <span>Balaji Gas • {BUSINESS_INFO.proprietor}</span>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF0DC] border border-[#C4841D]/40 text-[#9A6410] text-xs font-bold shadow-xs">
+                <Sparkles className="w-3.5 h-3.5 text-[#C4841D]" />
+                <span>Proprietor: <strong className="text-[#14422E] font-bold">{BUSINESS_INFO.proprietor}</strong></span>
               </div>
             </div>
 

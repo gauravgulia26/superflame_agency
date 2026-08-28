@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X, ShieldCheck, MapPin } from 'lucide-react';
+import { Phone, Menu, X, MapPin } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
 
 interface NavbarProps {
@@ -56,43 +56,30 @@ export const Navbar: React.FC<NavbarProps> = () => {
         >
           <div className="flex items-center justify-between gap-2">
             
-            {/* Custom Balaji Gas Logo & Business Details */}
+            {/* Clean Brand Logo & Name */}
             <a 
               href="#home" 
-              className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none text-left shrink-0 min-w-0"
+              className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none text-left shrink-0"
             >
               <img
                 src="/images/balaji_gas_logo.svg"
                 alt="Balaji Gas Logo"
                 className="w-8 h-8 sm:w-9 sm:h-9 object-contain shrink-0 drop-shadow-xs group-hover:scale-105 transition-transform"
               />
-              
-              <div className="flex flex-col min-w-0">
-                <div className="flex items-center gap-1.5 leading-tight whitespace-nowrap">
-                  <span className="font-serif font-bold text-base sm:text-lg text-[#14422E] tracking-tight whitespace-nowrap">
-                    {BUSINESS_INFO.brandName}
-                  </span>
-                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[#FAF0DC] text-[#9A6410] border border-[#C4841D]/30 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider whitespace-nowrap">
-                    <ShieldCheck className="w-2.5 h-2.5 text-[#14422E]" />
-                    <span>Super Gas Dealer</span>
-                  </span>
-                </div>
-                
-                <div className="text-[9px] sm:text-[10px] text-[#5A6660] font-medium leading-none mt-0.5 whitespace-nowrap truncate">
-                  Prop: <strong className="text-[#14422E] font-bold">{BUSINESS_INFO.proprietor}</strong> • <span className="text-[#5A6660]">Pooth Khurd, Delhi 110039</span>
-                </div>
-              </div>
+              <span className="font-serif font-bold text-lg sm:text-xl text-[#14422E] tracking-tight whitespace-nowrap">
+                {BUSINESS_INFO.brandName}
+              </span>
             </a>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden xl:flex items-center space-x-1 whitespace-nowrap">
+            <nav className="hidden md:flex items-center space-x-1 whitespace-nowrap">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
                 return (
                   <a
                     key={link.name}
                     href={link.href}
-                    className={`px-2.5 py-1 text-xs font-semibold rounded-xl transition-all duration-200 whitespace-nowrap ${
+                    className={`px-3 py-1.5 text-xs font-semibold rounded-xl transition-all duration-200 whitespace-nowrap ${
                       isActive
                         ? 'text-[#14422E] font-bold bg-[#E2EFE7] shadow-xs'
                         : 'text-[#5A6660] hover:text-[#14422E] hover:bg-white/60'
@@ -118,10 +105,10 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 <span className="sm:hidden text-[11px]">Call</span>
               </a>
 
-              {/* Hamburger Menu Toggle Button */}
+              {/* Hamburger Menu Toggle Button (Visible on mobile/tablet) */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-1.5 sm:p-2 rounded-xl bg-white/80 hover:bg-white text-[#14422E] border border-[#DCD2C0] transition-colors focus:outline-none shadow-2xs"
+                className="md:hidden p-1.5 sm:p-2 rounded-xl bg-white/80 hover:bg-white text-[#14422E] border border-[#DCD2C0] transition-colors focus:outline-none shadow-2xs"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -130,11 +117,11 @@ export const Navbar: React.FC<NavbarProps> = () => {
 
           </div>
 
-          {/* Navigation Drawer / Menu (Smooth Accordion for Mobile & Desktop) */}
+          {/* Navigation Drawer for Mobile */}
           {mobileMenuOpen && (
-            <div className="border-t border-[#DCD2C0] mt-2.5 pt-3 pb-2 animate-in slide-in-from-top-2 duration-200">
+            <div className="md:hidden border-t border-[#DCD2C0] mt-2.5 pt-3 pb-2 animate-in slide-in-from-top-2 duration-200">
               
-              {/* Business Overview Card inside Menu */}
+              {/* Business Details inside Drawer */}
               <div className="px-3 py-2.5 bg-[#FAF8F4] rounded-xl border border-[#DCD2C0] mb-2.5 text-left space-y-1">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5">
@@ -155,7 +142,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
               </div>
 
               {/* Links Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 text-left">
+              <div className="grid grid-cols-2 gap-1 text-left">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
