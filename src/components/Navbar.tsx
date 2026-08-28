@@ -56,23 +56,32 @@ export const Navbar: React.FC<NavbarProps> = () => {
         >
           <div className="flex items-center justify-between gap-2">
             
-            {/* Clean Brand Logo & Name */}
+            {/* Distinct Brand Typography & Subtle Tagline */}
             <a 
               href="#home" 
-              className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none text-left shrink-0"
+              className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none text-left shrink-0 min-w-0"
             >
               <img
                 src="/images/balaji_gas_logo.svg"
                 alt="Balaji Gas Logo"
                 className="w-8 h-8 sm:w-9 sm:h-9 object-contain shrink-0 drop-shadow-xs group-hover:scale-105 transition-transform"
               />
-              <span className="font-serif font-bold text-lg sm:text-xl text-[#14422E] tracking-tight whitespace-nowrap">
-                {BUSINESS_INFO.brandName}
-              </span>
+              
+              <div className="flex items-center gap-2 min-w-0">
+                <span className="font-['Cinzel'] font-bold text-base sm:text-lg lg:text-[19px] text-[#14422E] tracking-wider uppercase whitespace-nowrap">
+                  {BUSINESS_INFO.brandName}
+                </span>
+
+                <span className="hidden sm:inline-block w-px h-3.5 bg-[#C4841D]/35 shrink-0" />
+
+                <span className="hidden md:inline text-[11px] lg:text-xs text-[#5A6660] font-sans font-medium tracking-normal whitespace-nowrap truncate">
+                  More Power. Everyday Confidence.
+                </span>
+              </div>
             </a>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center space-x-1 whitespace-nowrap">
+            <nav className="hidden lg:flex items-center space-x-1 whitespace-nowrap">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
                 return (
@@ -105,10 +114,10 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 <span className="sm:hidden text-[11px]">Call</span>
               </a>
 
-              {/* Hamburger Menu Toggle Button (Visible on mobile/tablet) */}
+              {/* Hamburger Menu Toggle Button (Visible on mobile & tablet) */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-1.5 sm:p-2 rounded-xl bg-white/80 hover:bg-white text-[#14422E] border border-[#DCD2C0] transition-colors focus:outline-none shadow-2xs"
+                className="lg:hidden p-1.5 sm:p-2 rounded-xl bg-white/80 hover:bg-white text-[#14422E] border border-[#DCD2C0] transition-colors focus:outline-none shadow-2xs"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -117,16 +126,16 @@ export const Navbar: React.FC<NavbarProps> = () => {
 
           </div>
 
-          {/* Navigation Drawer for Mobile */}
+          {/* Navigation Drawer for Mobile/Tablet */}
           {mobileMenuOpen && (
-            <div className="md:hidden border-t border-[#DCD2C0] mt-2.5 pt-3 pb-2 animate-in slide-in-from-top-2 duration-200">
+            <div className="lg:hidden border-t border-[#DCD2C0] mt-2.5 pt-3 pb-2 animate-in slide-in-from-top-2 duration-200">
               
               {/* Business Details inside Drawer */}
               <div className="px-3 py-2.5 bg-[#FAF8F4] rounded-xl border border-[#DCD2C0] mb-2.5 text-left space-y-1">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5">
                     <img src="/images/balaji_gas_logo.svg" alt="Balaji Gas" className="w-4 h-4 object-contain" />
-                    <span className="text-xs font-serif font-bold text-[#14422E]">{BUSINESS_INFO.brandName}</span>
+                    <span className="text-xs font-['Cinzel'] font-bold text-[#14422E] tracking-wider uppercase">{BUSINESS_INFO.brandName}</span>
                   </div>
                   <span className="text-[9px] font-bold text-[#9A6410] bg-[#FAF0DC] px-2 py-0.5 rounded border border-[#C4841D]/30">
                     {BUSINESS_INFO.dealerTitle}
@@ -142,7 +151,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
               </div>
 
               {/* Links Grid */}
-              <div className="grid grid-cols-2 gap-1 text-left">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 text-left">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
