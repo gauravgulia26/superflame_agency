@@ -57,7 +57,7 @@ export const SupplyRequestModal: React.FC<SupplyModalProps> = ({
     });
 
     const text = encodeURIComponent(
-      `Hello Super Flame (Balaji Gas),\n` +
+      `Hello Balaji Gas (Super Gas Dealer),\n` +
       `👤 Name: ${formData.name || 'Customer'}\n` +
       `📞 Phone: ${formData.phone || 'N/A'}\n` +
       `🏢 Type: ${formData.customerType}\n` +
@@ -85,10 +85,10 @@ export const SupplyRequestModal: React.FC<SupplyModalProps> = ({
             </div>
             <div>
               <h3 className="font-serif font-bold text-base sm:text-lg leading-tight text-white">
-                Request LPG Supply
+                Request Super Gas Supply
               </h3>
               <p className="text-[10px] sm:text-[11px] text-white/80">
-                Super Flame (Balaji Gas) • Prop: Neeraj Dabas
+                {BUSINESS_INFO.brandName} • Prop: {BUSINESS_INFO.proprietor}
               </p>
             </div>
           </div>
@@ -210,7 +210,7 @@ export const SupplyRequestModal: React.FC<SupplyModalProps> = ({
             <div className="pt-1 flex items-center justify-between text-[11px] text-[#5A6660] border-t border-[#DCD2C0]">
               <div className="flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#14422E]" />
-                <span>BPCL Authorized Agency</span>
+                <span>Super Gas Authorized Dealer</span>
               </div>
               <a
                 href={`tel:${BUSINESS_INFO.rawPhone}`}

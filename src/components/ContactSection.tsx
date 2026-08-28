@@ -29,13 +29,13 @@ export const ContactSection: React.FC = () => {
     });
 
     const text = encodeURIComponent(
-      `Hello Super Flame (Balaji Gas),\n` +
+      `Hello Balaji Gas (Super Gas Dealer),\n` +
       `👤 Name: ${formData.name || 'Customer'}\n` +
       `📞 Phone: ${formData.phone || 'N/A'}\n` +
       `🏢 Type: ${formData.establishmentType}\n` +
       `🛢️ Requirement: ${formData.quantity} x ${formData.cylinderSize} cylinder(s)\n` +
       `📍 Delivery Area: ${formData.address || 'Delhi'}\n` +
-      `📝 Notes: ${formData.notes || 'Inquiring for LPG commercial refill / supply'}`
+      `📝 Notes: ${formData.notes || 'Inquiring for Super Gas LPG supply / refill'}`
     );
 
     setIsSent(true);
@@ -48,7 +48,7 @@ export const ContactSection: React.FC = () => {
     <section id="contact" className="py-10 sm:py-20 bg-[#F3EFE6] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header with Blur+Zoom scroll effect */}
+        {/* Section Header */}
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-2"
           initial={{ opacity: 0, scale: 0.95, filter: 'blur(6px)', y: 20 }}
@@ -61,10 +61,10 @@ export const ContactSection: React.FC = () => {
             <span>Direct Business Communications</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl text-[#181F1C] font-bold tracking-tight">
-            Connect with <span className="italic font-serif text-[#14422E]">Super Flame</span>
+            Connect with <span className="italic font-serif text-[#14422E]">Balaji Gas</span>
           </h2>
           <p className="text-xs sm:text-sm text-[#5A6660] leading-relaxed">
-            Fill the form below to directly message our Pooth Khurd coordinator on WhatsApp for instant commercial rates and delivery scheduling.
+            Fill the form below to message our Pooth Khurd coordinator directly on WhatsApp for commercial rates, delivery schedules, and bulk quotes.
           </p>
         </motion.div>
 
@@ -83,13 +83,13 @@ export const ContactSection: React.FC = () => {
               
               <div className="border-b border-[#DCD2C0] pb-3">
                 <div className="text-[10px] uppercase tracking-widest text-[#9A6410] font-bold">
-                  Authorized BPCL LPG Agency
+                  {BUSINESS_INFO.dealerTitle}
                 </div>
                 <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#181F1C]">
                   {BUSINESS_INFO.brandName}
                 </h3>
                 <div className="text-xs text-[#14422E] font-bold mt-0.5">
-                  Balaji Gas • Proprietor: {BUSINESS_INFO.proprietor}
+                  Proprietor: {BUSINESS_INFO.proprietor}
                 </div>
               </div>
 
@@ -108,7 +108,7 @@ export const ContactSection: React.FC = () => {
                   >
                     {BUSINESS_INFO.phone}
                   </a>
-                  <div className="text-[11px] text-[#5A6660]">Immediate Dispatch Coordinator</div>
+                  <div className="text-[11px] text-[#5A6660]">Neeraj Dabas (Dispatch Coordinator)</div>
                 </div>
               </div>
 
@@ -124,7 +124,7 @@ export const ContactSection: React.FC = () => {
                   <div className="text-xs sm:text-sm font-bold text-[#181F1C]">
                     {BUSINESS_INFO.address}
                   </div>
-                  <div className="text-[11px] text-[#5A6660] mt-0.5">Pooth Khurd, Delhi 110039</div>
+                  <div className="text-[11px] text-[#5A6660] mt-0.5">Kanhaiya Dharam Kata, Pooth Khurd, Delhi 110039</div>
                 </div>
               </div>
 
@@ -141,7 +141,7 @@ export const ContactSection: React.FC = () => {
                     Mon – Sat: 8:00 AM – 8:00 PM
                   </div>
                   <div className="text-[11px] text-[#5A6660]">
-                    Sunday: 9:00 AM – 5:00 PM (24x7 Commercial Bulk Service)
+                    Sunday: 9:00 AM – 5:00 PM (24x7 Commercial Bulk Support)
                   </div>
                 </div>
               </div>
@@ -351,15 +351,15 @@ export const ContactSection: React.FC = () => {
             {/* Embedded Map */}
             <div className="luxury-card rounded-2xl overflow-hidden border border-[#DCD2C0] shadow-luxury-sm">
               <div className="p-2.5 bg-[#FAF8F4] border-b border-[#DCD2C0] flex items-center justify-between text-xs font-bold text-[#181F1C]">
-                <div className="flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#C4841D]" />
-                  <span>Pooth Khurd, Delhi 110039 Location Map</span>
+                <div className="flex items-center gap-1.5 truncate">
+                  <MapPin className="w-3.5 h-3.5 text-[#C4841D] shrink-0" />
+                  <span className="truncate">Kanhaiya Dharam Kata, Pooth Khurd 110039</span>
                 </div>
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${BUSINESS_INFO.googleMapsQuery}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#14422E] hover:underline flex items-center gap-1 text-[10px]"
+                  className="text-[#14422E] hover:underline flex items-center gap-1 text-[10px] shrink-0"
                 >
                   <span>Open Maps</span>
                   <ArrowUpRight className="w-3 h-3" />
@@ -367,8 +367,8 @@ export const ContactSection: React.FC = () => {
               </div>
               <div className="h-52 sm:h-56 w-full bg-[#EAE3D5]">
                 <iframe
-                  title="Super Flame Pooth Khurd Delhi Map"
-                  src="https://maps.google.com/maps?q=Pooth+Khurd+Delhi+110039&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                  title="Balaji Gas Pooth Khurd Delhi Map"
+                  src={BUSINESS_INFO.googleMapsEmbedUrl}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
         >
           <div className="flex items-center justify-between">
             
-            {/* Brand Logo & Complete Business Metadata (BPCL Affiliation & Proprietor Neeraj Dabas) */}
+            {/* Brand Logo: Balaji Gas (Auth. Dealer: Super Gas) */}
             <a 
               href="#home" 
               className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none text-left"
@@ -69,16 +69,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5 leading-tight">
                   <span className="font-serif font-bold text-base sm:text-lg text-[#14422E] tracking-tight">
-                    SUPER FLAME
+                    {BUSINESS_INFO.brandName}
                   </span>
                   <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-[#FAF0DC] text-[#9A6410] border border-[#C4841D]/30 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider">
                     <ShieldCheck className="w-2.5 h-2.5 text-[#14422E]" />
-                    <span>BPCL Auth.</span>
+                    <span>Super Gas Dealer</span>
                   </span>
                 </div>
                 
                 <span className="text-[9px] sm:text-[10px] text-[#5A6660] font-medium leading-none mt-0.5">
-                  <strong className="text-[#14422E] font-bold">Balaji Gas</strong> • Prop: <strong className="text-[#9A6410] font-semibold">Neeraj Dabas</strong>
+                  Prop: <strong className="text-[#14422E] font-bold">{BUSINESS_INFO.proprietor}</strong> • Pooth Khurd
                 </span>
               </div>
             </a>
@@ -134,19 +134,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
 
           </div>
 
-          {/* Mobile Drawer (with full metadata integrated) */}
+          {/* Mobile Drawer */}
           {mobileMenuOpen && (
             <div className="lg:hidden border-t border-[#DCD2C0] mt-2.5 pt-3 pb-2 animate-in slide-in-from-top-2 duration-200">
-              {/* Mobile Business Header */}
               <div className="px-3 py-2 bg-[#FAF8F4] rounded-xl border border-[#DCD2C0] mb-2 text-left space-y-0.5">
                 <div className="text-xs font-serif font-bold text-[#14422E]">
-                  Super Flame (Balaji Gas)
+                  {BUSINESS_INFO.brandName}
                 </div>
                 <div className="text-[10px] text-[#9A6410] font-semibold">
-                  Authorized BPCL LPG Distributor
+                  {BUSINESS_INFO.dealerTitle}
                 </div>
                 <div className="text-[10px] text-[#5A6660]">
-                  Proprietor: <strong className="text-[#181F1C]">Neeraj Dabas</strong> • Hub: <strong className="text-[#181F1C]">Pooth Khurd, Delhi</strong>
+                  Proprietor: <strong className="text-[#181F1C]">{BUSINESS_INFO.proprietor}</strong>
+                </div>
+                <div className="text-[9px] text-[#5A6660] truncate">
+                  {BUSINESS_INFO.address}
                 </div>
               </div>
 

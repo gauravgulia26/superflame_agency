@@ -89,33 +89,33 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
     <section id="products" className="py-10 sm:py-20 bg-[#EFEAE0]/80 relative overflow-hidden border-t border-b border-[#DCD2C0]">
       
       {/* Background Accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[850px] h-[400px] sm:h-[550px] bg-[#C4841D]/10 rounded-full blur-3xl -z-10 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] sm:w-[850px] h-[350px] sm:h-[550px] bg-[#C4841D]/10 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div 
-          className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-[#DCD2C0]"
+          className="flex flex-col md:flex-row md:items-end justify-between mb-5 sm:mb-8 pb-3 sm:pb-6 border-b border-[#DCD2C0]"
           initial={{ opacity: 0, scale: 0.96, filter: 'blur(6px)', y: 15 }}
           whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)', y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="space-y-1.5 sm:space-y-2.5 max-w-2xl text-left">
+          <div className="space-y-1 sm:space-y-2 max-w-2xl text-left">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF0DC] border border-[#C4841D]/40 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#9A6410]">
               <Flame className="w-3.5 h-3.5 text-[#E59C24]" />
-              <span>All 5 Official Sizes</span>
+              <span>All 5 Official Super Gas Capacities</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-4xl text-[#181F1C] font-bold tracking-tight">
-              Bharatgas <span className="italic font-serif text-[#14422E]">Cylinder Range</span>
+              Super Gas <span className="italic font-serif text-[#14422E]">Cylinder Range</span>
             </h2>
             <p className="text-xs sm:text-sm text-[#5A6660] leading-relaxed">
-              Complete official cylinders in full high resolution. Swipe or tap below to explore specifications.
+              Official Super Gas cylinders in full high definition. Swipe or tap below to explore capacities.
             </p>
           </div>
 
           {/* Quick Filter Switcher Pills */}
-          <div className="mt-3 md:mt-0 flex overflow-x-auto pb-1 sm:pb-0 items-center gap-1 sm:gap-1.5 bg-white/90 p-1 sm:p-1.5 rounded-2xl border border-[#DCD2C0] shadow-luxury-sm no-scrollbar">
+          <div className="mt-2.5 md:mt-0 flex overflow-x-auto pb-1 sm:pb-0 items-center gap-1 sm:gap-1.5 bg-white/90 p-1 sm:p-1.5 rounded-2xl border border-[#DCD2C0] shadow-luxury-sm no-scrollbar">
             {CYLINDER_PRODUCTS.map((prod, idx) => (
               <button
                 key={prod.id}
@@ -133,7 +133,7 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
         </motion.div>
 
         {/* Carousel Controls */}
-        <div className="flex items-center justify-between mb-2 sm:mb-3 text-[11px] sm:text-xs text-[#5A6660]">
+        <div className="flex items-center justify-between mb-2 text-[11px] sm:text-xs text-[#5A6660]">
           <div className="flex items-center gap-1.5">
             <span className="font-semibold text-[#14422E]">Swipe to browse</span>
             <span className="text-[#BFB199]">•</span>
@@ -164,7 +164,7 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
         </div>
 
         {/* Embla Carousel Viewport */}
-        <div className="overflow-hidden py-2 -mx-3 px-3 sm:mx-0 sm:px-0 cursor-grab active:cursor-grabbing" ref={emblaRef}>
+        <div className="overflow-hidden py-1.5 -mx-3 px-3 sm:mx-0 sm:px-0 cursor-grab active:cursor-grabbing" ref={emblaRef}>
           <div className="flex -ml-3 sm:-ml-6 touch-pan-y">
             {CYLINDER_PRODUCTS.map((prod, idx) => {
               const isActive = selectedIndex === idx;
@@ -196,23 +196,23 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
                       </span>
                     </div>
 
-                    {/* FULL UNCUT POSTER CONTAINER (Aspect Square & Fitted Perfectly) */}
+                    {/* FULL UNCUT POSTER CONTAINER (Fitted Perfectly with Zero Cropping) */}
                     <div 
-                      className="relative aspect-square w-full rounded-xl bg-gradient-to-b from-[#FAF8F4] to-[#EFEAE0] p-1.5 sm:p-2 flex items-center justify-center border border-[#DCD2C0] overflow-hidden group cursor-pointer shadow-xs"
+                      className="relative aspect-square w-full rounded-xl bg-gradient-to-b from-[#FAF8F4] to-[#EFEAE0] p-1 sm:p-2 flex items-center justify-center border border-[#DCD2C0] overflow-hidden group cursor-pointer shadow-xs"
                       onClick={(e) => {
                         e.stopPropagation();
                         setLightboxPoster({ src: prod.posterImage, title: prod.name });
                       }}
-                      title="Click to view full size poster"
+                      title="Tap to view full high-res poster"
                     >
                       <img
                         src={prod.posterImage}
-                        alt={`${prod.name} Full Official Poster`}
+                        alt={`${prod.name} Official Super Gas Poster`}
                         className="w-full h-full object-contain rounded-lg drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
                         loading="lazy"
                       />
 
-                      {/* Expand Zoom Icon Overlay */}
+                      {/* Lightbox zoom hint */}
                       <div className="absolute top-2 right-2 p-1.5 rounded-lg bg-black/50 text-white opacity-70 group-hover:opacity-100 backdrop-blur-sm transition-opacity">
                         <Maximize2 className="w-3.5 h-3.5" />
                       </div>
@@ -250,7 +250,7 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
         </div>
 
         {/* Pagination Dots */}
-        <div className="flex justify-center items-center gap-1.5 sm:gap-2 mt-4 sm:mt-5">
+        <div className="flex justify-center items-center gap-1.5 sm:gap-2 mt-3 sm:mt-5">
           {scrollSnaps.map((_, idx) => (
             <button
               key={idx}
@@ -274,10 +274,10 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
         >
           {/* Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 sm:pb-4 border-b border-[#DCD2C0] gap-2.5">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 sm:pb-4 border-b border-[#DCD2C0] gap-2">
             <div>
               <div className="text-[9px] sm:text-[10px] uppercase font-bold tracking-widest text-[#9A6410]">
-                BPCL Specifications
+                Super Gas Specifications
               </div>
               <h3 className="font-serif font-bold text-lg sm:text-2xl text-[#181F1C]">
                 {activeProduct.name}
@@ -368,7 +368,7 @@ export const ProductsCarousel: React.FC<ProductsCarouselProps> = ({
           </div>
 
           {/* Pricing Note & Booking CTA */}
-          <div className="mt-4 pt-3 sm:pt-4 border-t border-[#DCD2C0] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
+          <div className="mt-4 pt-3 sm:pt-4 border-t border-[#DCD2C0] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2">
             <div className="flex items-center gap-1.5 text-xs text-[#5A6660]">
               <Info className="w-4 h-4 text-[#C4841D] shrink-0" />
               <span>{activeProduct.bestPriceNote}</span>

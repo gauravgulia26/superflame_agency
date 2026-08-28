@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Award, MapPin, Phone, Building2, Flame, ArrowUpRight } from 'lucide-react';
+import { Award, Shield, CheckCircle, Flame, Building2, MapPin } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
 
 interface AboutSectionProps {
@@ -9,188 +9,145 @@ interface AboutSectionProps {
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenOrderModal }) => {
   return (
-    <section id="about" className="py-14 md:py-20 bg-[#FAF8F4]/80 relative border-t border-b border-[#DCD2C0]">
-      
-      {/* Glow */}
-      <div className="absolute top-10 right-1/4 w-72 h-72 bg-[#C4841D]/10 rounded-full blur-3xl -z-10 pointer-events-none" />
-
+    <section id="about" className="py-10 sm:py-20 bg-[#FAF8F4] relative overflow-hidden border-t border-[#DCD2C0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading with Blur+Zoom scroll effect */}
+        {/* Section Header */}
         <motion.div 
-          className="text-center max-w-3xl mx-auto mb-12 space-y-2.5"
+          className="text-center max-w-3xl mx-auto mb-8 sm:mb-14 space-y-2 sm:space-y-3"
           initial={{ opacity: 0, scale: 0.95, filter: 'blur(6px)', y: 20 }}
           whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)', y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E2EFE7] border border-[#14422E]/20 text-xs font-bold uppercase tracking-wider text-[#14422E]">
-            <Award className="w-3.5 h-3.5 text-[#C4841D]" />
-            <span>Authorized BPCL LPG Agency</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF0DC] border border-[#C4841D]/40 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#9A6410]">
+            <Building2 className="w-3.5 h-3.5 text-[#C4841D]" />
+            <span>Authorized Super Gas Dealership</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl text-[#181F1C] font-bold tracking-tight">
-            Distinguished Heritage in <br className="hidden sm:inline" />
-            <span className="italic font-serif text-[#14422E]">Safe & Uninterrupted</span> Energy Logistics
+
+          <h2 className="font-serif text-2xl sm:text-4xl text-[#181F1C] font-bold tracking-tight">
+            Trust & Excellence with <span className="italic font-serif text-[#14422E]">Balaji Gas</span>
           </h2>
+
           <p className="text-xs sm:text-sm text-[#5A6660] leading-relaxed">
-            Operating under the stewardship of <strong className="text-[#181F1C] font-bold">Balaji Gas (Neeraj Dabas)</strong>, Super Flame Bharatgas delivers genuine Bharat Petroleum LPG with verified weight accuracy, pressure certification, and dedicated commercial priority.
+            Led by Proprietor <strong className="text-[#181F1C] font-bold">{BUSINESS_INFO.proprietor}</strong>, Balaji Gas delivers certified Super Gas LPG energy with verified weight accuracy, maximum safety standards, and dedicated commercial priority across Delhi NCR.
           </p>
         </motion.div>
 
-        {/* 2-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* 2-Column Story Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center">
           
-          {/* Left Column: Credentials Card with Blur+Zoom */}
+          {/* Left Column: Official Accreditation Card */}
           <motion.div 
-            className="lg:col-span-6 space-y-5"
+            className="lg:col-span-6 space-y-4 text-left"
             initial={{ opacity: 0, scale: 0.94, filter: 'blur(6px)', x: -20 }}
             whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)', x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="luxury-card rounded-2xl p-6 sm:p-7 border border-[#C4841D]/35 shadow-luxury-md relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#C4841D]/15 to-transparent rounded-bl-full pointer-events-none" />
-
-              <div className="flex items-center gap-3 border-b border-[#DCD2C0] pb-4 mb-4">
-                <div className="p-2.5 rounded-xl bg-gradient-to-br from-[#14422E] to-[#0B3B70] text-white shadow-xs">
-                  <Building2 className="w-5 h-5 text-[#E59C24]" />
+            <div className="luxury-card rounded-2xl p-4 sm:p-7 border border-[#C4841D]/35 shadow-luxury-md relative overflow-hidden">
+              
+              <div className="flex items-center gap-3 border-b border-[#DCD2C0] pb-3 sm:pb-4 mb-3 sm:mb-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#14422E] to-[#0B3B70] flex items-center justify-center text-white border border-[#C4841D]/40 shadow-xs shrink-0">
+                  <Flame className="w-5 h-5 sm:w-6 sm:h-6 text-[#E59C24]" />
                 </div>
                 <div>
-                  <h3 className="font-serif font-bold text-xl text-[#181F1C]">
-                    Super Flame Bharatgas
-                  </h3>
-                  <p className="text-[11px] text-[#9A6410] font-bold tracking-wide uppercase">
-                    Auth. LPG Distributor: Bharat Petroleum Corp. Ltd. (BPCL)
-                  </p>
+                  <div className="font-serif font-bold text-base sm:text-xl text-[#181F1C]">
+                    {BUSINESS_INFO.brandName}
+                  </div>
+                  <div className="text-[10px] sm:text-xs text-[#9A6410] font-bold tracking-wide uppercase">
+                    {BUSINESS_INFO.dealerTitle}
+                  </div>
                 </div>
               </div>
 
-              <div className="space-y-3 text-xs sm:text-sm text-[#2D3833] leading-relaxed">
+              <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-[#5A6660] leading-relaxed">
                 <p>
-                  As an accredited Bharatgas distributor, we uphold BPCL’s sacred motto: <em className="font-serif text-[#14422E] font-bold">“Cook Food. Serve Love.”</em> We supply certified LPG fuel directly to restaurants, commercial food factories, hotels, institutions, and domestic customers.
+                  As an authorized Super Gas dealer, we are dedicated to providing: <em className="font-serif text-[#14422E] font-bold">“More Power. Everyday Confidence.”</em> We supply certified LPG fuel directly to commercial restaurants, industrial units, banquet halls, and domestic kitchens.
                 </p>
-                <p>
-                  Our central distribution facility in <strong className="text-[#181F1C] font-semibold">Pooth Khurd (Delhi 110039)</strong> operates with automated tare-weight verification, electronic leak inspections, and swift replenishment vehicles covering North and West Delhi.
+                <p className="hidden sm:block">
+                  Operating from our primary hub at Kanhaiya Dharam Kata in Pooth Khurd, we ensure guaranteed weight accuracy, multi-point valve inspections, and priority scheduled delivery fleets for high-volume commercial establishments.
                 </p>
               </div>
 
-              {/* Entity Facts */}
-              <div className="mt-5 pt-4 border-t border-[#DCD2C0] grid grid-cols-2 gap-3">
-                <div className="p-3 rounded-xl bg-white border border-[#DCD2C0]">
-                  <div className="text-[9px] uppercase tracking-wider text-[#5A6660] font-bold">Principal Entity</div>
-                  <div className="text-sm font-serif font-bold text-[#14422E]">Balaji Gas</div>
-                  <div className="text-[10px] text-[#5A6660] font-medium">Neeraj Dabas</div>
+              {/* Badges Strip */}
+              <div className="mt-4 pt-3 border-t border-[#DCD2C0] grid grid-cols-2 gap-2 text-left">
+                <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-[#DCD2C0]">
+                  <div className="text-[9px] uppercase tracking-wider text-[#5A6660] font-bold">Dealership</div>
+                  <div className="text-xs font-bold text-[#14422E] font-serif">Super Gas Authorized</div>
                 </div>
-
-                <div className="p-3 rounded-xl bg-white border border-[#DCD2C0]">
-                  <div className="text-[9px] uppercase tracking-wider text-[#5A6660] font-bold">BPCL Accreditation</div>
-                  <div className="text-sm font-serif font-bold text-[#0B3B70]">Auth. Distributor</div>
-                  <div className="text-[10px] text-[#5A6660] font-medium">All 5 Standard Sizes</div>
+                <div className="p-2 sm:p-2.5 rounded-xl bg-white border border-[#DCD2C0]">
+                  <div className="text-[9px] uppercase tracking-wider text-[#5A6660] font-bold">Proprietor</div>
+                  <div className="text-xs font-bold text-[#181F1C] font-serif">{BUSINESS_INFO.proprietor}</div>
                 </div>
               </div>
 
-              {/* Location Bar */}
-              <div className="mt-4 flex items-start gap-2.5 p-3 rounded-xl bg-[#FAF0DC] border border-[#C4841D]/35 text-xs text-[#181F1C]">
-                <MapPin className="w-4 h-4 text-[#C4841D] shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold text-[#9A6410]">Registered Operating Hub:</span>{' '}
-                  <span className="text-[#5A6660]">Plot No 366, Kh No 155, Pooth Khurd, Delhi 110039</span>
-                </div>
+              {/* Address Footer */}
+              <div className="mt-2.5 flex items-center gap-1.5 text-[10px] sm:text-xs text-[#5A6660] bg-white/70 p-2 rounded-xl border border-[#DCD2C0]">
+                <MapPin className="w-3.5 h-3.5 text-[#C4841D] shrink-0" />
+                <span className="truncate">{BUSINESS_INFO.address}</span>
               </div>
 
             </div>
           </motion.div>
 
-          {/* Right Column: Values with Blur+Zoom */}
+          {/* Right Column: Key Commitments */}
           <motion.div 
-            className="lg:col-span-6 space-y-3.5"
+            className="lg:col-span-6 space-y-3 sm:space-y-4 text-left"
             initial={{ opacity: 0, scale: 0.94, filter: 'blur(6px)', x: 20 }}
             whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)', x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
           >
-            
-            {/* Card 1 */}
-            <motion.div 
-              className="luxury-card luxury-card-hover p-4 sm:p-5 rounded-2xl border border-[#DCD2C0]"
-              whileHover={{ y: -3 }}
-            >
-              <div className="flex items-start gap-3.5">
-                <div className="p-2.5 rounded-xl bg-[#E2EFE7] text-[#14422E] border border-[#14422E]/20 shrink-0">
-                  <Shield className="w-5 h-5" />
+            <div className="space-y-2.5">
+              
+              <div className="p-3 sm:p-4 rounded-xl bg-white border border-[#DCD2C0] shadow-luxury-xs flex items-start gap-3">
+                <div className="p-1.5 rounded-lg bg-[#E2EFE7] text-[#14422E] shrink-0 mt-0.5">
+                  <CheckCircle className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="font-serif font-bold text-base text-[#181F1C] mb-1">
-                    “Your Safety Our Priority” Protocol
-                  </h4>
-                  <p className="text-xs text-[#5A6660] leading-relaxed">
-                    Zero tolerance for compromised seals or worn valves. Every cylinder dispatched has passed multi-stage hydrostatic inspection and pre-delivery seal verification.
+                  <h3 className="text-xs sm:text-sm font-bold text-[#181F1C]">100% Genuine Super Gas Supply</h3>
+                  <p className="text-[11px] sm:text-xs text-[#5A6660] mt-0.5">
+                    Strictly factory-sealed cylinders with serialized tamper-evident security caps directly from authorized bottling lines.
                   </p>
                 </div>
               </div>
-            </motion.div>
 
-            {/* Card 2 */}
-            <motion.div 
-              className="luxury-card luxury-card-hover p-4 sm:p-5 rounded-2xl border border-[#DCD2C0]"
-              whileHover={{ y: -3 }}
-            >
-              <div className="flex items-start gap-3.5">
-                <div className="p-2.5 rounded-xl bg-[#FAF0DC] text-[#9A6410] border border-[#C4841D]/30 shrink-0">
-                  <Flame className="w-5 h-5 text-[#E59C24]" />
+              <div className="p-3 sm:p-4 rounded-xl bg-white border border-[#DCD2C0] shadow-luxury-xs flex items-start gap-3">
+                <div className="p-1.5 rounded-lg bg-[#FAF0DC] text-[#9A6410] shrink-0 mt-0.5">
+                  <Award className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="font-serif font-bold text-base text-[#181F1C] mb-1">
-                    Commercial & Industrial Manifold Specialization
-                  </h4>
-                  <p className="text-xs text-[#5A6660] leading-relaxed">
-                    Custom VOT and LOT manifold banks engineered for restaurants, commercial bakeries, and factories—eliminating fuel freeze and ensuring calorific stability.
+                  <h3 className="text-xs sm:text-sm font-bold text-[#181F1C]">Commercial Volume Advantage</h3>
+                  <p className="text-[11px] sm:text-xs text-[#5A6660] mt-0.5">
+                    Transparent official commercial tariffs with customized billing, credit cycles, and volume rebate tiers.
                   </p>
                 </div>
               </div>
-            </motion.div>
 
-            {/* Card 3 */}
-            <motion.div 
-              className="luxury-card luxury-card-hover p-4 sm:p-5 rounded-2xl border border-[#DCD2C0]"
-              whileHover={{ y: -3 }}
-            >
-              <div className="flex items-start gap-3.5">
-                <div className="p-2.5 rounded-xl bg-[#E4EEF8] text-[#0B3B70] border border-[#0B3B70]/20 shrink-0">
-                  <Phone className="w-5 h-5" />
+              <div className="p-3 sm:p-4 rounded-xl bg-white border border-[#DCD2C0] shadow-luxury-xs flex items-start gap-3">
+                <div className="p-1.5 rounded-lg bg-[#E4EEF8] text-[#0B3B70] shrink-0 mt-0.5">
+                  <Shield className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="font-serif font-bold text-base text-[#181F1C] mb-1">
-                    Direct Proprietor & Priority Dispatch Line
-                  </h4>
-                  <p className="text-xs text-[#5A6660] leading-relaxed">
-                    Direct access to knowledgeable energy consultants for cylinder bank sizing, piping safety audits, and scheduled replenishment contracts.
+                  <h3 className="text-xs sm:text-sm font-bold text-[#181F1C]">24/7 Commercial Emergency Helpline</h3>
+                  <p className="text-[11px] sm:text-xs text-[#5A6660] mt-0.5">
+                    Immediate emergency refill logistics so restaurants and factories never face interrupted operations.
                   </p>
                 </div>
               </div>
-            </motion.div>
 
-            {/* Action Bar */}
-            <div className="pt-2 flex flex-wrap items-center gap-3">
-              <motion.button
+            </div>
+
+            {/* Quick Action Button */}
+            <div className="pt-1">
+              <button
                 onClick={onOpenOrderModal}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#14422E] to-[#1D5A3F] hover:brightness-105 text-white text-xs font-bold uppercase tracking-wider shadow-sm border border-[#C4841D]/40"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#14422E] to-[#1D5A3F] text-white text-xs font-bold uppercase tracking-wider hover:brightness-105 transition-all shadow-sm border border-[#C4841D]/40"
               >
-                <span>Partner with Us</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#E59C24]" />
-              </motion.button>
-
-              <motion.a
-                href={`tel:${BUSINESS_INFO.rawPhone}`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white text-[#14422E] text-xs font-bold border border-[#DCD2C0] hover:bg-[#FAF8F4] shadow-luxury-sm transition-colors"
-              >
-                <Phone className="w-3.5 h-3.5 text-[#C4841D]" />
-                <span>Call Neeraj Dabas ({BUSINESS_INFO.rawPhone})</span>
-              </motion.a>
+                <span>Partner with Balaji Gas</span>
+                <Flame className="w-3.5 h-3.5 text-[#E59C24]" />
+              </button>
             </div>
 
           </motion.div>

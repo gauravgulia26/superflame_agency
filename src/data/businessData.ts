@@ -26,39 +26,40 @@ export interface CylinderProduct {
 }
 
 export const BUSINESS_INFO = {
-  brandName: "Super Flame Bharatgas",
-  subtitle: "Auth. LPG Distributor (BPCL)",
-  agencyName: "Balaji Gas",
+  brandName: "Balaji Gas",
+  dealerTitle: "Authorized Dealer: Super Gas",
+  shortDealerTitle: "Auth. Dealer: Super Gas",
   proprietor: "Neeraj Dabas",
-  tagline: "Safe Energy • Every Day • Every Way",
-  slogan: "Cook Food. Serve Love.",
-  onePromise: "Every Need. Every Size. Powering Homes. Fueling Businesses.",
-  groupImage: "/images/group_all_cylinders.png",
+  tagline: "More Power. Everyday Confidence.",
+  subTagline: "Reliable Energy • Everyday Confidence",
+  slogan: "Powering Homes. Fueling Businesses.",
+  onePromise: "More Power. Everyday Confidence.",
+  groupImage: "/images/supergas_group.png",
   trustBadge: "Your Safety Our Priority",
   ratingStars: 5,
   phone: "+91 98998 13581",
   rawPhone: "9899813581",
-  address: "Plot No 366, Kh No 155, Pooth Khurd, Delhi 110039",
-  shortAddress: "Pooth Khurd, Delhi 110039",
+  address: "Plot number 251/154, Kanhaiya Dharam Kata, Pooth Khurd, Delhi 110039",
+  shortAddress: "Kanhaiya Dharam Kata, Pooth Khurd, Delhi 110039",
   city: "Delhi",
   pincode: "110039",
-  whatsappUrl: "https://wa.me/919899813581?text=Hello%20Super%20Flame%20Bharatgas%2C%20I%20would%20like%20to%20inquire%20about%20LPG%20gas%20supply.",
-  googleMapsQuery: "Plot+No+366+Kh+No+155+Pooth+Khurd+Delhi+110039",
-  googleMapsEmbedUrl: "https://maps.google.com/maps?q=Plot+No+366+Kh+No+155+Pooth+Khurd+Delhi+110039&t=&z=14&ie=UTF8&iwloc=&output=embed",
+  whatsappUrl: "https://wa.me/919899813581?text=Hello%20Balaji%20Gas%20(Super%20Gas%20Dealer)%2C%20I%20would%20like%20to%20inquire%20about%20LPG%20gas%20supply.",
+  googleMapsQuery: "Plot+number+251+154+Kanhaiya+Dharam+Kata+Pooth+Khurd+Delhi+110039",
+  googleMapsEmbedUrl: "https://maps.google.com/maps?q=Kanhaiya+Dharam+Kata+Pooth+Khurd+Delhi+110039&t=&z=14&ie=UTF8&iwloc=&output=embed",
   corePillars: [
     {
       title: "100% Safe",
       subtitle: "Trusted Safety",
-      description: "BPCL certified pressure-tested cylinders with automated multi-point leak checks & tamper-evident seals.",
-      shortDesc: "BPCL certified pressure-tested cylinders with zero-leak guarantee.",
+      description: "Super Gas certified pressure-tested cylinders with automated multi-point leak checks & tamper-evident seals.",
+      shortDesc: "Super Gas certified cylinders with zero-leak guarantee.",
       icon: "ShieldCheck",
       accent: "text-forest"
     },
     {
       title: "Best Price",
       subtitle: "More Savings",
-      description: "Direct official BPCL commercial tariffs with volume discount slabs for high-consumption restaurants & enterprises.",
-      shortDesc: "Official BPCL commercial rates with volume discount slabs.",
+      description: "Direct Super Gas commercial tariffs with volume discount slabs for high-consumption restaurants & enterprises.",
+      shortDesc: "Competitive official tariffs with volume commercial discounts.",
       icon: "IndianRupee",
       accent: "text-gold"
     },
@@ -66,7 +67,7 @@ export const BUSINESS_INFO = {
       title: "On Time Delivery",
       subtitle: "Every Need, Every Time",
       description: "Priority dispatch fleet covering Pooth Khurd, Bawana, Narela, Rohini & Delhi NCR with zero delivery delays.",
-      shortDesc: "Priority prompt dispatch across Pooth Khurd, Bawana & Delhi NCR.",
+      shortDesc: "Prompt priority delivery across Pooth Khurd, Bawana & Delhi NCR.",
       icon: "Truck",
       accent: "text-navy"
     },
@@ -74,7 +75,7 @@ export const BUSINESS_INFO = {
       title: "Trusted Service",
       subtitle: "Service with a Smile",
       description: "Personalized account management by Balaji Gas (Neeraj Dabas) with 24/7 commercial emergency assistance.",
-      shortDesc: "Dedicated local support by Balaji Gas (Neeraj Dabas).",
+      shortDesc: "Dedicated local support by Neeraj Dabas (Balaji Gas).",
       icon: "Handshake",
       accent: "text-forest"
     }
@@ -84,7 +85,7 @@ export const BUSINESS_INFO = {
     "Liquid Off-Take (LOT) & Vapour Off-Take (VOT) Systems",
     "24/7 Priority Emergency Support for Commercial Kitchens",
     "Automated Routine Inspection & O-Ring Safety Audits",
-    "Direct BPCL Bottling Plant Supply Chain Integrity"
+    "Direct Super Gas Supply Chain Integrity"
   ],
   operationalHours: "Mon – Sat: 8:00 AM – 8:00 PM | Sun: 9:00 AM – 5:00 PM (24x7 Commercial Emergency)",
   coverageAreas: [
@@ -94,8 +95,8 @@ export const BUSINESS_INFO = {
     "Rohini (Sectors 1–38)",
     "Pitampura",
     "Kanjhawala",
-    "Mundka",
-    "Alipur",
+    "Mundka Industrial Area",
+    "Alipur & GT Karnal Road",
     "North & West Delhi"
   ]
 };
@@ -106,15 +107,15 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
     size: "5 KG",
     weightNumber: 5,
     unit: "KG",
-    name: "5 kg LPG Cylinder",
-    tagline: "Small in Size, Big in Performance.",
-    subtitle: "Perfect for Small Families & Compact Kitchens. Big on Safety. Easy on Everyday.",
+    name: "5 Kg Super Gas Cylinder",
+    tagline: "Small in size, Big in performance.",
+    subtitle: "Compact design engineered for small kitchens, food kiosks, live counters and portable heating.",
     category: "Domestic & Compact",
-    image: "/images/poster_5kg.png",
-    posterImage: "/images/poster_5kg.png",
-    colorName: "Vibrant Green",
+    image: "/images/supergas_5kg.png",
+    posterImage: "/images/supergas_5kg.png",
+    colorName: "Olive Green",
     themeColor: "#14422E",
-    badge: "Easy to Lift",
+    badge: "Compact & Light",
     specs: {
       gasCapacity: "5.0 kg Net LPG",
       tareWeight: "Approx. 7.5 - 8.2 kg",
@@ -124,16 +125,16 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
       offTakeType: "Vapour Off-Take (VOT)"
     },
     idealFor: [
-      "Small Families & Compact Kitchens",
+      "Small Kitchens & Compact Spaces",
       "Food Trucks & Outdoor Live Counters",
       "Weekend Caterers & Pop-up Kiosks",
       "Laboratory & Portable Heating"
     ],
     features: [
-      "Easy to Lift: Lightweight design for convenience",
-      "Safe & Reliable: Built with advanced safety features",
-      "Perfect for Daily Use: Ideal for cooking meals for small families",
-      "Trusted Quality: Backed by Bharatgas quality you can trust"
+      "Small in size, big in performance",
+      "Ergonomic handle for easy lifting & mobility",
+      "Pressure-tested Super Gas safety valve",
+      "Factory-crimped tamper-evident security seal"
     ],
     bestPriceNote: "Economical pricing with swift on-demand refill."
   },
@@ -142,15 +143,15 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
     size: "19 KG",
     weightNumber: 19,
     unit: "KG",
-    name: "19 kg LPG Cylinder",
-    tagline: "For Every Home, Every Meal.",
-    subtitle: "The Heart of Your Home Kitchen. The trusted choice for millions of Indian families & cafes.",
+    name: "19 kg Super Gas Cylinder",
+    tagline: "Powering your everyday moments.",
+    subtitle: "The trusted commercial workhorse for restaurants, cafes, cloud kitchens, and large households.",
     category: "Commercial Standard",
-    image: "/images/poster_19kg.png",
-    posterImage: "/images/poster_19kg.png",
+    image: "/images/supergas_19kg.png",
+    posterImage: "/images/supergas_19kg.png",
     colorName: "Royal Blue",
     themeColor: "#0B3B70",
-    badge: "High Performance",
+    badge: "Commercial Favorite",
     specs: {
       gasCapacity: "19.0 kg Net LPG",
       tareWeight: "Approx. 18.5 - 19.5 kg",
@@ -166,25 +167,25 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
       "Catering & Banqueting Services"
     ],
     features: [
-      "High Performance: Consistent flame, better cooking",
-      "Safe & Reliable: Advanced safety features you can trust",
-      "Clean & Efficient: Cleaner fuel for a healthier kitchen & home",
-      "Trusted by Millions: Standard commercial workhorse"
+      "Powering your everyday moments with high calorific heat",
+      "High performance: Consistent intense blue flame",
+      "Clean & efficient: Cleaner burning for commercial kitchens",
+      "Seamless manifold pairing for 2 to 8 cylinder banks"
     ],
-    bestPriceNote: "Volume commercial discount slabs for restaurants."
+    bestPriceNote: "Volume commercial discount slabs for contracted restaurants."
   },
   {
     id: "cyl-35kg",
     size: "35 KG",
     weightNumber: 35,
     unit: "KG",
-    name: "35 kg LPG Cylinder",
-    tagline: "More Power for Your Everyday Needs.",
-    subtitle: "Built to deliver strong performance for bigger families, bakeries and heavy commercial cooking.",
+    name: "35 Kg Super Gas Cylinder",
+    tagline: "Reliable energy. Everyday confidence.",
+    subtitle: "High-capacity commercial cylinder designed for bakeries, industrial ovens, and heavy cooking.",
     category: "Commercial Heavy",
-    image: "/images/poster_35kg.png",
-    posterImage: "/images/poster_35kg.png",
-    colorName: "Flame Red",
+    image: "/images/supergas_35kg.png",
+    posterImage: "/images/supergas_35kg.png",
+    colorName: "Crimson Red",
     themeColor: "#C23131",
     badge: "High Capacity",
     specs: {
@@ -202,10 +203,10 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
       "Heavy Food Processing Kitchens"
     ],
     features: [
-      "High Capacity: Ideal for large families, catering & heavy cooking",
-      "Superior Safety: Advanced safety features ensure peace of mind",
-      "Efficient & Reliable: Consistent performance with fewer refills",
-      "Trusted Quality: Backed by Bharatgas quality you can trust"
+      "Reliable energy with 84% more fuel than 19kg",
+      "Superior safety with heavy-duty protective collar",
+      "Efficient & reliable: Fewer cylinder swaps, less downtime",
+      "High continuous vaporization rate for peak load hours"
     ],
     bestPriceNote: "Optimized unit cost with scheduled commercial delivery."
   },
@@ -214,15 +215,15 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
     size: "47.5 KG",
     weightNumber: 47.5,
     unit: "KG",
-    name: "47.5 kg LPG Cylinder",
-    tagline: "Strength You Can Count On.",
-    subtitle: "Performance You Can Trust. Designed for larger households, commercial kitchens and heavy LOT manifolds.",
+    name: "47.5 Kg Super Gas Cylinder",
+    tagline: "More Power. Everyday Confidence.",
+    subtitle: "Built for heavy industrial demands, large hotel manifolds, and Liquid Off-Take (LOT) systems.",
     category: "Industrial Heavy",
-    image: "/images/poster_47kg.png",
-    posterImage: "/images/poster_47kg.png",
+    image: "/images/supergas_47kg.png",
+    posterImage: "/images/supergas_47kg.png",
     colorName: "Forest Green Heavy",
     themeColor: "#14422E",
-    badge: "Extra Large Capacity",
+    badge: "LOT & Industrial",
     specs: {
       gasCapacity: "47.5 kg Net LPG",
       tareWeight: "Approx. 40.0 - 43.0 kg",
@@ -238,10 +239,10 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
       "Centralized Commercial Gas Banks (LOT Manifolds)"
     ],
     features: [
-      "Extra Large Capacity: Ideal for big demands and commercial use",
-      "Maximum Safety: Built with robust safety features",
-      "Longer Durability: Made from high-grade materials for long life",
-      "More Convenience: Fewer refills, more savings and uninterrupted cooking"
+      "More power and maximum payload per cylinder footprint",
+      "Heavy industrial grade construction for heavy cycles",
+      "100% fuel extraction with zero winter freeze residue",
+      "Ideal for multi-cylinder automatic changeover manifolds"
     ],
     bestPriceNote: "Direct institutional pricing for manufacturing & hospitality."
   },
@@ -250,12 +251,12 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
     size: "450 KG",
     weightNumber: 450,
     unit: "KG",
-    name: "450 kg LPG Tank",
+    name: "450 Kg Super Gas Tank",
     tagline: "Powering Businesses. Fueling Growth.",
-    subtitle: "Bulk energy solution for large scale industrial operations. High capacity. Always reliable.",
+    subtitle: "Bulk mini-tank storage solution for manufacturing plants, centralized food courts, and complexes.",
     category: "Bulk Operations",
-    image: "/images/poster_450kg.png",
-    posterImage: "/images/poster_450kg.png",
+    image: "/images/supergas_450kg.png",
+    posterImage: "/images/supergas_450kg.png",
     colorName: "Titanium White Vessel",
     themeColor: "#C4841D",
     badge: "Bulk Vessel",
@@ -271,13 +272,13 @@ export const CYLINDER_PRODUCTS: CylinderProduct[] = [
       "Manufacturing Plants & Glass Melting Furnaces",
       "Shopping Mall Centralized Food Courts",
       "Pharmaceutical Synthesis & Chemical Plants",
-      "Townships & Reticulated Gas Networks"
+      "Townships & Reticulated Commercial Networks"
     ],
     features: [
-      "Extra Large Capacity: Replaces 24+ standard cylinders",
-      "Maximum Safety: Telemetry monitoring & interlocks",
-      "Cost Efficient: Lower operating costs and more savings",
-      "Reliable & Durable: Built to last with superior quality"
+      "Powering businesses and fueling growth with bulk storage",
+      "Replaces 24+ standard cylinders in a single safe vessel",
+      "Telemetry monitoring & automated pressure interlocks",
+      "Lowest bulk unit energy tariff with scheduled tanker supply"
     ],
     bestPriceNote: "Dedicated bulk tanker replenishment with maximum tariff advantages."
   }
@@ -300,7 +301,7 @@ export const SAFETY_PROTOCOLS = [
     step: "03",
     title: "Tamper-Proof Holographic Seal",
     shortTitle: "Tamper-Proof Seal",
-    description: "Delivered strictly with intact, serialized Bharatgas tamper-evident security caps and safety instructions."
+    description: "Delivered strictly with intact, serialized Super Gas tamper-evident security caps and safety instructions."
   },
   {
     step: "04",
@@ -333,20 +334,20 @@ export const COMMERCIAL_SOLUTIONS = [
 
 export const FAQS = [
   {
-    question: "What is Super Flame Bharatgas and how is it affiliated?",
-    answer: "Super Flame Bharatgas (Balaji Gas, managed by Neeraj Dabas) is an Official Authorized LPG Distributor affiliated with Bharat Petroleum Corporation Limited (BPCL), operating from Pooth Khurd, Delhi (PIN 110039). We supply genuine, safety-tested Bharatgas cylinders for domestic, commercial, and industrial clients."
+    question: "What is Balaji Gas and how is it affiliated?",
+    answer: "Balaji Gas (managed by Proprietor Neeraj Dabas) is an Official Authorized Dealer for Super Gas, operating from Plot number 251/154, Kanhaiya Dharam Kata, Pooth Khurd, Delhi 110039. We supply genuine, certified Super Gas LPG cylinders for domestic, commercial, and industrial clients."
   },
   {
     question: "Which cylinder sizes are available for supply?",
-    answer: "We supply all 5 official capacity cylinders: 5 kg (Domestic & Compact), 19 kg (Standard Commercial), 35 kg (High-Efficiency Commercial), 47.5 kg (Heavy Commercial & LOT/VOT Industrial), and 450 kg (Bharatgas Maxima Bulk Storage Vessel)."
+    answer: "We supply all 5 official capacity Super Gas cylinders: 5 kg (Domestic & Compact), 19 kg (Standard Commercial), 35 kg (High-Efficiency Commercial), 47.5 kg (Heavy Commercial & LOT/VOT Industrial), and 450 kg (Super Gas Bulk Storage Tank)."
   },
   {
     question: "How do I place a quick commercial cylinder order or schedule regular deliveries?",
-    answer: "You can call us directly at 9899813581 or tap the WhatsApp / Request Supply button on this website. Our team coordinates immediate dispatch for verified commercial and bulk clients."
+    answer: "You can call Neeraj Dabas directly at 9899813581 or tap the WhatsApp button on this website. Our team coordinates immediate dispatch for commercial and bulk clients across Delhi NCR."
   },
   {
     question: "What areas in Delhi NCR do you service?",
-    answer: "Our primary hub in Pooth Khurd (Delhi 110039) services North Delhi, Bawana Industrial Area, Narela, Rohini, Pitampura, Mundka, Alipur, Kanjhawala, Mangolpuri, and surrounding commercial districts."
+    answer: "Our primary hub at Kanhaiya Dharam Kata in Pooth Khurd (Delhi 110039) services North Delhi, Bawana Industrial Area, Narela, Rohini, Pitampura, Mundka, Alipur, Kanjhawala, Mangolpuri, and surrounding commercial districts."
   },
   {
     question: "What is the difference between VOT and LOT cylinder installations?",
