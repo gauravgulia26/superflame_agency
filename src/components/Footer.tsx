@@ -25,12 +25,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
                 <Flame className="w-5 h-5 text-[#E59C24]" />
               </div>
               <div>
-                <div className="font-serif font-bold text-lg text-white tracking-tight flex items-center gap-1.5">
-                  <span>SUPER FLAME</span>
-                  <span className="text-[#FF6B6B]">BHARATGAS</span>
+                <div className="font-serif font-bold text-xl text-white tracking-tight">
+                  SUPER FLAME
                 </div>
                 <div className="text-[10px] text-[#F4D388] font-semibold tracking-wider uppercase">
-                  Auth. BPCL Distributor • Balaji Gas
+                  Auth. LPG Distributor (BPCL) • Balaji Gas
                 </div>
               </div>
             </div>

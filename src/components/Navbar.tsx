@@ -68,15 +68,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
               
               <div className="flex flex-col">
                 <div className="flex items-center gap-1 leading-none">
-                  <span className="font-serif font-bold text-sm sm:text-base text-[#14422E] tracking-tight">
+                  <span className="font-serif font-bold text-base sm:text-lg text-[#14422E] tracking-tight">
                     SUPER FLAME
-                  </span>
-                  <span className="font-serif font-bold text-sm sm:text-base text-[#C23131] tracking-tight">
-                    BHARATGAS
                   </span>
                 </div>
                 <span className="text-[9px] sm:text-[10px] text-[#5A6660] font-semibold tracking-wider uppercase">
-                  BPCL Distributor • <strong className="text-[#9A6410]">Balaji Gas</strong>
+                  Authorized LPG Agency • <strong className="text-[#9A6410]">Balaji Gas</strong>
                 </span>
               </div>
             </a>
