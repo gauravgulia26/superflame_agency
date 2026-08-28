@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X, ArrowUpRight, Flame, ShieldCheck } from 'lucide-react';
+import { Phone, Menu, X, Flame, ShieldCheck, MapPin } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/businessData';
 
 interface NavbarProps {
-  onOpenOrderModal: (cylinderSize?: string) => void;
+  onOpenOrderModal?: (cylinderSize?: string) => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
+export const Navbar: React.FC<NavbarProps> = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -47,51 +47,51 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
 
   return (
     <>
-      <div className="fixed top-3 left-0 right-0 z-50 px-3 sm:px-6 pointer-events-none">
+      <div className="fixed top-3 left-0 right-0 z-50 px-2 sm:px-6 pointer-events-none">
         <header
           className={`max-w-6xl mx-auto pointer-events-auto rounded-2xl transition-all duration-300 ${
             isScrolled
               ? 'luxury-nav py-2 px-3 sm:px-5 shadow-luxury-md border border-[#C4841D]/35'
-              : 'bg-[#FAF8F4]/90 backdrop-blur-xl py-2.5 px-3 sm:px-5 shadow-luxury-sm border border-[#DCD2C0]'
+              : 'bg-[#FAF8F4]/95 backdrop-blur-xl py-2.5 px-3 sm:px-5 shadow-luxury-sm border border-[#DCD2C0]'
           }`}
         >
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-2">
             
-            {/* Brand Logo: Balaji Gas (Auth. Dealer: Super Gas) */}
+            {/* Brand Logo & Complete Business Details (No Word Wrap) */}
             <a 
               href="#home" 
-              className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none text-left"
+              className="flex items-center gap-2 sm:gap-2.5 group focus:outline-none text-left shrink-0 min-w-0"
             >
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#14422E] via-[#1D5A3F] to-[#0B3B70] flex items-center justify-center shadow-sm border border-[#C4841D]/40 group-hover:scale-105 transition-transform shrink-0">
                 <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-[#E59C24] animate-pulse" />
               </div>
               
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1.5 leading-tight">
-                  <span className="font-serif font-bold text-base sm:text-lg text-[#14422E] tracking-tight">
+              <div className="flex flex-col min-w-0">
+                <div className="flex items-center gap-1.5 leading-tight whitespace-nowrap">
+                  <span className="font-serif font-bold text-base sm:text-lg text-[#14422E] tracking-tight whitespace-nowrap">
                     {BUSINESS_INFO.brandName}
                   </span>
-                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-[#FAF0DC] text-[#9A6410] border border-[#C4841D]/30 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-[#FAF0DC] text-[#9A6410] border border-[#C4841D]/30 text-[8px] sm:text-[9px] font-bold uppercase tracking-wider whitespace-nowrap">
                     <ShieldCheck className="w-2.5 h-2.5 text-[#14422E]" />
                     <span>Super Gas Dealer</span>
                   </span>
                 </div>
                 
-                <span className="text-[9px] sm:text-[10px] text-[#5A6660] font-medium leading-none mt-0.5">
-                  Prop: <strong className="text-[#14422E] font-bold">{BUSINESS_INFO.proprietor}</strong> • Pooth Khurd
-                </span>
+                <div className="text-[9px] sm:text-[10px] text-[#5A6660] font-medium leading-none mt-0.5 whitespace-nowrap truncate">
+                  Prop: <strong className="text-[#14422E] font-bold">{BUSINESS_INFO.proprietor}</strong> • <span className="text-[#5A6660]">Pooth Khurd, Delhi 110039</span>
+                </div>
               </div>
             </a>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-1">
+            <nav className="hidden xl:flex items-center space-x-1 whitespace-nowrap">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.id;
                 return (
                   <a
                     key={link.name}
                     href={link.href}
-                    className={`px-3 py-1.5 text-xs font-semibold rounded-xl transition-all duration-200 ${
+                    className={`px-2.5 py-1 text-xs font-semibold rounded-xl transition-all duration-200 whitespace-nowrap ${
                       isActive
                         ? 'text-[#14422E] font-bold bg-[#E2EFE7] shadow-xs'
                         : 'text-[#5A6660] hover:text-[#14422E] hover:bg-white/60'
@@ -103,29 +103,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
               })}
             </nav>
 
-            {/* Action CTAs */}
-            <div className="flex items-center space-x-2">
+            {/* Right Side: Direct Call & Hamburger Menu */}
+            <div className="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+              
+              {/* Direct Phone Helpline Link */}
               <a
                 href={`tel:${BUSINESS_INFO.rawPhone}`}
-                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-xl text-[#14422E] bg-[#E2EFE7] hover:bg-[#D4E8DC] transition-colors border border-[#14422E]/15"
-                title="Direct Phone Call"
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 text-xs font-bold rounded-xl text-[#14422E] bg-[#E2EFE7] hover:bg-[#D4E8DC] transition-colors border border-[#14422E]/15 whitespace-nowrap shadow-2xs"
+                title={`Call ${BUSINESS_INFO.phone}`}
               >
-                <Phone className="w-3 h-3 text-[#C4841D]" />
-                <span className="font-mono">{BUSINESS_INFO.rawPhone}</span>
+                <Phone className="w-3.5 h-3.5 text-[#C4841D] shrink-0" />
+                <span className="font-mono hidden sm:inline">{BUSINESS_INFO.rawPhone}</span>
+                <span className="sm:hidden text-[11px]">Call</span>
               </a>
 
-              <button
-                onClick={() => onOpenOrderModal()}
-                className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-[#14422E] via-[#1D5A3F] to-[#0B3B70] hover:brightness-105 active:scale-[0.98] rounded-xl shadow-luxury-sm hover:shadow-luxury-md transition-all duration-200 border border-[#C4841D]/40"
-              >
-                <span>Request Supply</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-[#E59C24]" />
-              </button>
-
-              {/* Mobile Hamburger Button */}
+              {/* Hamburger Menu Toggle Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-1.5 rounded-xl text-[#14422E] hover:bg-white/60 transition-colors focus:outline-none"
+                className="p-1.5 sm:p-2 rounded-xl bg-white/80 hover:bg-white text-[#14422E] border border-[#DCD2C0] transition-colors focus:outline-none shadow-2xs"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -134,25 +129,31 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
 
           </div>
 
-          {/* Mobile Drawer */}
+          {/* Navigation Drawer / Menu (Smooth Accordion for Mobile & Desktop) */}
           {mobileMenuOpen && (
-            <div className="lg:hidden border-t border-[#DCD2C0] mt-2.5 pt-3 pb-2 animate-in slide-in-from-top-2 duration-200">
-              <div className="px-3 py-2 bg-[#FAF8F4] rounded-xl border border-[#DCD2C0] mb-2 text-left space-y-0.5">
-                <div className="text-xs font-serif font-bold text-[#14422E]">
-                  {BUSINESS_INFO.brandName}
-                </div>
-                <div className="text-[10px] text-[#9A6410] font-semibold">
-                  {BUSINESS_INFO.dealerTitle}
+            <div className="border-t border-[#DCD2C0] mt-2.5 pt-3 pb-2 animate-in slide-in-from-top-2 duration-200">
+              
+              {/* Business Overview Card inside Menu */}
+              <div className="px-3 py-2.5 bg-[#FAF8F4] rounded-xl border border-[#DCD2C0] mb-2.5 text-left space-y-1">
+                <div className="flex items-center justify-between">
+                  <div className="text-xs font-serif font-bold text-[#14422E]">
+                    {BUSINESS_INFO.brandName}
+                  </div>
+                  <span className="text-[9px] font-bold text-[#9A6410] bg-[#FAF0DC] px-2 py-0.5 rounded border border-[#C4841D]/30">
+                    {BUSINESS_INFO.dealerTitle}
+                  </span>
                 </div>
                 <div className="text-[10px] text-[#5A6660]">
-                  Proprietor: <strong className="text-[#181F1C]">{BUSINESS_INFO.proprietor}</strong>
+                  Proprietor: <strong className="text-[#181F1C] font-semibold">{BUSINESS_INFO.proprietor}</strong>
                 </div>
-                <div className="text-[9px] text-[#5A6660] truncate">
-                  {BUSINESS_INFO.address}
+                <div className="text-[9px] text-[#5A6660] flex items-center gap-1">
+                  <MapPin className="w-3 h-3 text-[#C4841D] shrink-0" />
+                  <span className="truncate">{BUSINESS_INFO.address}</span>
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-1 text-left">
+              {/* Links Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 text-left">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
@@ -161,22 +162,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
                     className={`py-2 px-3 rounded-xl text-xs font-semibold transition-colors ${
                       activeSection === link.id
                         ? 'bg-[#E2EFE7] text-[#14422E] font-bold'
-                        : 'text-[#5A6660] hover:bg-white/60 hover:text-[#14422E]'
+                        : 'text-[#5A6660] hover:bg-white/80 hover:text-[#14422E]'
                     }`}
                   >
                     {link.name}
                   </a>
                 ))}
-
-                <div className="pt-2 flex flex-col gap-2">
-                  <a
-                    href={`tel:${BUSINESS_INFO.rawPhone}`}
-                    className="w-full flex items-center justify-center gap-2 py-2 rounded-xl bg-[#E2EFE7] text-[#14422E] text-xs font-bold border border-[#14422E]/15"
-                  >
-                    <Phone className="w-3.5 h-3.5 text-[#C4841D]" />
-                    <span>Call {BUSINESS_INFO.phone}</span>
-                  </a>
-                </div>
               </div>
             </div>
           )}
